@@ -1,0 +1,241 @@
+/* .hidden {
+  display: none;
+} */
+
+/* General */
+
+.port-main-bg {
+  background-color: var(--gw-000);
+}
+
+.portfolio-wrapper {
+  margin: 0 auto 0 auto;
+  padding: 0 3.2rem 0 3.2rem;
+  max-width: 102.4rem;
+}
+
+.port-grid {
+  display: grid;
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+}
+
+/* Nav */
+
+.header-background {
+  /* z-index: 2;
+  position: sticky; */
+  height: 11rem;
+  top: 0;
+  background: radial-gradient(
+    75% 130% at 80% 75%,
+    rgb(23, 63, 95) 15%,
+    #12283a 100%
+  );
+  box-shadow: 0 0.2rem 0.5rem #12283a15;
+  padding-bottom: 0.5rem;
+}
+
+/* Opener */
+
+.opener-grid {
+  grid: auto auto auto / 3fr 1fr;
+  margin-bottom: 5rem;
+}
+
+.opener-splash {
+  width: 100%;
+  border-radius: 1.6rem;
+}
+
+.opener-title {
+  grid-column: 1 / span 2;
+}
+
+.opener-primary-textblock {
+  margin-top: 2.4rem;
+}
+
+.opener-secondary-textblock {
+  background: radial-gradient(
+    75% 130% at 80% 75%,
+    rgb(23, 63, 95) 15%,
+    #12283a 100%
+  );
+  padding: 2rem 2rem 4.5rem 3.2rem;
+  /* border: 0.2rem solid #4293d7; */
+  margin: 2rem 0 4rem 0;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.3rem 0.5rem #12283a10;
+}
+
+/* CASE STUDY BODY */
+
+.process-steps {
+  background-color: var(--gw-000);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-steps:nth-child(odd) {
+  background-color: var(--gw-900);
+  & h2 {
+    color: var(--gw-000);
+  }
+  & p {
+    color: var(--gw-000);
+  }
+}
+
+.port-wrapper {
+  /* width: 20rem; */
+  /* border: solid 3px; */
+  max-width: 75%;
+  padding: 20rem;
+}
+
+/* Case Study Body Grid Elements */
+
+.--1square-text-left {
+  grid-template-columns: 1fr 2fr;
+  padding: 12.8rem 3.2rem;
+  gap: 4.8rem;
+  background-color: purple;
+}
+
+.--1square-text-right {
+  grid: auto / 2fr 1fr;
+  gap: 4.8rem;
+  background-color: green;
+}
+
+.--2square {
+  grid: 1fr / 1fr;
+  background-color: blue;
+}
+
+.--4square {
+  grid: 1fr 1fr / 1fr 1fr;
+  background-color: red;
+}
+
+.--text-top {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: yellow;
+}
+
+/* This one lets the text or whatever cross grid borders */
+.--grid-span {
+  grid-column: 1 / -1;
+  height: auto;
+  background-color: orange;
+}
+
+/* Case Study Body General Elements */
+
+.bg-extender {
+  background: radial-gradient(
+    75% 130% at 80% 75%,
+    rgb(23, 63, 95) 15%,
+    #12283a 100%
+  );
+  --bg-image: url("/img/portfolio/cranimals/cranimals-bg-light-3.svg");
+  --bg-image-opacity: 0.04;
+  position: relative;
+  isolation: isolate;
+  padding: 12.8rem 0;
+}
+
+.bg-extender::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: var(--bg-image-opacity);
+
+  background-image: var(--bg-image);
+  background-size: 60%;
+  background-position: top 20rem right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.port-image {
+  /* position: relative; */
+  /* overflow: hidden; */
+  border-radius: 0.8rem;
+  box-shadow: 0 0.3rem 0.5rem #12283a10;
+  overflow: hidden;
+}
+
+.port-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Port Text Stylings */
+
+.port-title {
+  font-size: 6.4rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--gw-800);
+  text-align: center;
+  margin: 10rem 0 5rem 0;
+}
+
+.port-title span {
+  color: var(--gw-600);
+}
+
+.port-sub-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--gw-600);
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.--title-on-dark {
+  color: var(--gw-500);
+}
+
+.port-body-text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--gw-900);
+  margin-bottom: 1.2rem;
+}
+
+.port-sidebar-title {
+  color: var(--gw-500);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.2rem 0 1.2rem 0;
+}
+
+.port-sidebar-list {
+  /* margin: 1.8rem 0 0 1.8rem; */
+  list-style: disc inside none;
+  color: var(--gw-000);
+  font-size: 1.4rem;
+}
+
+/* Extra Modifiers */
+
+.port-text-on-dark {
+  color: var(--gw-000);
+}
+
+.--section-break {
+  margin-bottom: 3.2rem;
+}
+
+.--top-bottom-padding {
+  padding: 12rem 0;
+}

@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.4.0"
+    "astro": "^4.4.0",
+    "astro-integration-lottie": "^0.2.3",
+    "lottie-web": "^5.12.2"
   }
 }

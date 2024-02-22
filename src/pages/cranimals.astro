@@ -1,10 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import { Image } from "astro:assets";
 
-import { Image } from 'astro:assets';
+// <head>
+  const pageTitle = "Cranimals";
+
 
 // Header
 import headerImage from '../images/cranimals/Cranimals-header@2x.webp';
+
+// const {
+//   title = "headerImage",
+//   description = "Cranimals Zen Dogfood",
+//   image="../images/cranimals/Cranimals-header@2x.webp"
+// } = Astro.props;d
 
 // Section 01
 import section0101 from '../images/cranimals/cranimals-sketch-01.webp';
@@ -12,13 +21,15 @@ import section0102 from '../images/cranimals/cranimals-sketch-02.webp';
 import section0103 from '../images/cranimals/cranimals-sketch-03.webp';
 import section0104 from '../images/cranimals/cranimals-sketch-04.webp';
 
-const pageTitle = "Cranimals";
+
+
+
 
 
 
 ---
-
-<MainLayout><!-- START OF CONTENT -->
+<!-- <MainLayout title={title}></MainLayout> -->
+<MainLayout pageTitle={pageTitle}><!-- START OF CONTENT -->
 
   <!-- Opener -->
   <main>
@@ -28,10 +39,13 @@ const pageTitle = "Cranimals";
           <h1 class="port-title">
             {pageTitle}: <span>Designing Charlie</span>
           </h1>
-          <img
+      
+          <Image
             class="opener-splash"
-            alt="Cranimals Zen Dogfood Image"
-            src={headerImage.src}
+            loading="eager"
+            quality="high"
+            alt="Cranimals Zen Dogfood"
+            src={headerImage}
           />
         </div>
         <div class="opener-primary-textblock">
@@ -71,30 +85,30 @@ const pageTitle = "Cranimals";
               <a
                 href="/img/portfolio/cranimals/cranimals-sketch-01.webp"
                 data-lightbox="image-1"
-                ><img
+                ><Image
                   alt="Cranimals Zen Dogfood Early Sketch"
-                  src={section0101.src}
+                  src={section0101}
                   decoding="async"
               /></a>
             </div>
             <div class="port-image">
-              <img
+              <Image
                 alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0102.src}
+                src={section0102}
                 decoding="async"
               />
             </div>
             <div class="port-image">
-              <img
+              <Image
                 alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0103.src}
+                src={section0103}
                 decoding="async"
               />
             </div>
             <div class="port-image">
-              <img
+              <Image
                 alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0104.src}
+                src={section0104}
                 decoding="async"
               />
             </div>
@@ -132,7 +146,7 @@ const pageTitle = "Cranimals";
         </div>
         <div class="port-image">
           <img
-            alt="Cranimals Zen Dogfood Image"
+            alt="Cranimals Zen Dogfood"
             src="/img/portfolio/cranimals/cranimals-finalsketch.webp"
           />
         </div>
@@ -143,7 +157,7 @@ const pageTitle = "Cranimals";
         <section class="port-grid --1square-text-right portfolio-wrapper">
           <div class="port-image">
             <img
-              alt="Cranimals Zen Dogfood Image"
+              alt="Cranimals Zen Dogfood"
               src="/img/portfolio/cranimals/cranimals-final.webp"
             />
           </div>
@@ -181,13 +195,13 @@ const pageTitle = "Cranimals";
         </div>
         <div class="port-image">
           <img
-            alt="Cranimals Zen Dogfood Image"
+            alt="Cranimals Zen Dogfood"
             src="/img/portfolio/cranimals/craminals-packaging.webp"
           />
         </div>
         <div class="port-image">
           <img
-            alt="Cranimals Zen Dogfood Image"
+            alt="Cranimals Zen Dogfood"
             src="/img/portfolio/cranimals/monica_mads.webp"
           />
         </div>

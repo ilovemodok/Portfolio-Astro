@@ -23,15 +23,9 @@
 /* Nav */
 
 .header-background {
-  /* z-index: 2;
-  position: sticky; */
   height: 11rem;
   top: 0;
-  background: radial-gradient(
-    75% 130% at 80% 75%,
-    rgb(23, 63, 95) 15%,
-    #12283a 100%
-  );
+
   box-shadow: 0 0.2rem 0.5rem #12283a15;
   padding-bottom: 0.5rem;
 }
@@ -45,6 +39,7 @@
 
 .opener-splash {
   width: 100%;
+  height: auto;
   border-radius: 1.6rem;
 }
 

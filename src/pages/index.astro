@@ -1,16 +1,43 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import LottieHero from "astro-integration-lottie/Lottie.astro";
+import { Image } from "astro:assets";
 
 const pageTitle = "Gary Wintle's Portfolio";
+
+// Template Images
+import Underline from '../images/template/bezier-underline.svg';
+
+// Services Images
+import mediamiteIllustration from '../images/homepage/mediamites/mediamite-illustration.svg';
+import mediamiteGraphicDesign from '../images/homepage/mediamites/mediamite-graphicdesign.svg';
+import mediamiteWebDesign from '../images/homepage/mediamites/mediamite-webdesign.svg';
+import mediamiteMotionGraphics from '../images/homepage/mediamites/mediamite-mograph.svg';
+
+// Portfolio Thumbnails
+import portThumbnail01 from '../images/homepage/portfolio-thumbnails/port-thumbnail-cranimals@2x.png';
+import portThumbnail02 from '../images/homepage/portfolio-thumbnails/port-thumbnail-surfin-burrito@2x.png';
+import portThumbnail03 from '../images/homepage/portfolio-thumbnails/port-thumbnail-phbooks@2x.png';
+import portThumbnail04 from '../images/homepage/portfolio-thumbnails/port-thumbnail-rakuten@2x.png';
+import portThumbnail05 from '../images/homepage/portfolio-thumbnails/port-thumbnail-bumblebee@2x.png';
+import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png';
+
+
+
+
 ---
 
 <MainLayout pageTitle={pageTitle}>
+
+	
+
 
  <!-- ******************************
       
                     HERO
 
       ****************************** -->
+	
 
 			      <section class="section-hero">
         <div class="hero">
@@ -40,15 +67,9 @@ const pageTitle = "Gary Wintle's Portfolio";
           <!-- hero image box -->
 
           <div class="hero-image-box">
-            <dotlottie-player
-              src="../images/homepage/GW-Hero-Lottie-01.lottie"
-              class="gw-lottie"
-              background="transparent"
-              speed="1"
-              loop
-              autoplay
-              alt="Hero image of Gary Wintle as a cartoon floating among design tools."
-            ></dotlottie-player>
+						<LottieHero src="/animations/hero-animation.json" 
+						autoplay="visible" 
+						id="hero-animation"/>
           </div>
         </div>
       </section>
@@ -63,11 +84,11 @@ const pageTitle = "Gary Wintle's Portfolio";
 	<section aria-labelledby="link-services" class="section-container">
 		<div class="section-titletext-container short-top-text-container">
 			<h2 id="link-services" class="subheading-title">Services</h2>
-			<img
+			<Image
 				width="376"
 				height="26"
 				class="header-underline"
-				src="/img/template/gw-underline.svg"
+				src={Underline}
 				alt="bezier unlerline decoration"
 			/>
 			<p class="section-body-text">
@@ -80,12 +101,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- SERVICES / ILLUSTRATIONS -->
 
 			<div class="services-media">
-				<img
+				<Image
 					width="130"
 					height="130"
 					class="mediamite-img"
 					alt="Cute Illustration Icon"
-					src="/img/template/mediamites/mediamite-illustrations.svg"
+					src={mediamiteIllustration}
 				/>
 				<p class="services-type-title">Illustration</p>
 				<p class="services-type-subtitle">mascots | books | games</p>
@@ -114,12 +135,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- SERVICES / GRAPHIC DESIGN -->
 
 			<div class="services-media">
-				<img
+				<Image
 					width="130"
 					height="130"
 					class="mediamite-img"
 					alt="Cute Graphic Design Icon"
-					src="/img/template/mediamites/mediamite-graphicdesign.svg"
+					src={mediamiteGraphicDesign}
 				/>
 				<p class="services-type-title">Graphic Design</p>
 				<p class="services-type-subtitle">Signs | Books | Merch</p>
@@ -141,12 +162,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- SERVICES / WEB DESIGN -->
 
 			<div class="services-media">
-				<img
+				<Image
 					width="130"
 					height="130"
 					class="mediamite-img"
 					alt="Cute Web Design Icon"
-					src="/img/template/mediamites/mediamite-webdesign.svg"
+					src={mediamiteWebDesign}
 				/>
 				<p class="services-type-title">Web Design</p>
 				<p class="services-type-subtitle">websites | app design</p>
@@ -185,12 +206,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- SERVICES / MOTION GRAPHICS -->
 
 			<div class="services-media">
-				<img
+				<Image
 					width="130"
 					height="130"
 					class="mediamite-img"
 					alt="Cute Motion Graphics Icon"
-					src="/img/template/mediamites/mediamite-mograph.svg"
+					src={mediamiteMotionGraphics}
 				/>
 				<p class="services-type-title">Motion Graphics</p>
 				<p class="services-type-subtitle">Ads | Mobile Games</p>
@@ -252,11 +273,11 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<h2 id="link-port" class="subheading-title text-ondark drop-shadow">
 				Portfolio
 			</h2>
-			<img
+			<Image
 				width="376"
 				height="26"
 				class="header-underline flipped"
-				src="/img/template/gw-underline.svg"
+				src={Underline}
 				alt="bezier unlerline decoration"
 			/>
 			<p class="section-body-text text-ondark">
@@ -265,33 +286,18 @@ const pageTitle = "Gary Wintle's Portfolio";
 			</p>
 		</div>
 		<div class="portfolio-grid">
+
 			<!-- Portfolio / Cranimals -->
-
-			<a class="portfolio-link" href="/cranimals.html"
+	<a class="portfolio-link" href="http://garywintle.com/cranimals"
 				><div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-cranimals.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-cranimals.png
-							"
-							type="image/png"
-						/>
-
-						<img
+						<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
-							alt="Cranimals Zen Dogfood Image"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-cranimals.webp"
+							alt="Cranimals Zen Dogfood"
+							src={portThumbnail01}
 							loading="lazy"
 						/>
-					</picture>
 
 					<div class="port-thumbnail-textbox">
 						<p class="port-type-title">Cranimals</p>
@@ -306,26 +312,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- Portfolio / The Surfin' Burrito -->
 			<a class="portfolio-link" href="http://garywintle.com/surfinburrito"
 				><div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-surfin-burrito.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-surfin-burrito.png
-							"
-							type="image/png"
-						/>
-
-						<img
+	<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
 							alt="The Surfin' Burrito Donkey"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-surfin-burrito.webp"
+							src={portThumbnail02}
 							loading="lazy"
 						/>
 					</picture>
@@ -345,29 +337,14 @@ const pageTitle = "Gary Wintle's Portfolio";
 				href="/img/portfolioart/potheadbooks.webp"
 				data-lightbox="image-1"
 				><div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-phbooks_1.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-phbooks_1.png
-							"
-							type="image/png"
-						/>
-
-						<img
+						<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
 							alt="Pothead Books Game Character Illustration"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-phbooks_1.webp"
+							src={portThumbnail03}
 							loading="lazy"
 						/>
-					</picture>
 					<div class="port-thumbnail-textbox">
 						<p class="port-type-title">Pothead Books</p>
 						<p class="port-type-subtitle">Books | Boardgames</p>
@@ -381,29 +358,15 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- Portfolio / Rakuten -->
 			<a class="portfolio-link" href="http://garywintle.com/rakuten"
 				><div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-rakuten.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-rakuten.png
-							"
-							type="image/png"
-						/>
-
-						<img
+						<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
 							alt="Rakuten Illustration with a Godzilla-looking kaiju high-fiving a King Kong-looking kaiju"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-rakuten.webp"
+							src={portThumbnail04}
 							loading="lazy"
 						/>
-					</picture>
+				
 
 					<div class="port-thumbnail-textbox">
 						<p class="port-type-title">Rakuten</p>
@@ -419,26 +382,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 
 			<a class="portfolio-link" href="http://garywintle.com/bumblebee">
 				<div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-bumblebee.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-bumblebee.png
-							"
-							type="image/png"
-						/>
-
-						<img
+						<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
 							alt="Cute little bumblebee with Bumblebee English logo"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-bumblebee.webp"
+							src={portThumbnail05}
 							loading="lazy"
 						/>
 					</picture>
@@ -453,26 +402,12 @@ const pageTitle = "Gary Wintle's Portfolio";
 			<!-- Portfolio / Dank Arson -->
 			<a class="portfolio-link" href="/messagesent.html"
 				><div class="portfolio-card">
-					<picture>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-dankarson.webp
-							"
-							type="image/webp"
-						/>
-						<source
-							srcset="
-								/img/template/portfolio-thumbnails/port-thumbnail-cocaleaf.png
-							"
-							type="image/png"
-						/>
-
-						<img
+						<Image
 							width="338"
 							height="338"
 							class="port-thumbnail-img"
 							alt="Dank Arson Logo"
-							src="/img/template/portfolio-thumbnails/port-thumbnail-cocaleaf.webp"
+							src={portThumbnail06}
 							loading="lazy"
 						/>
 					</picture>
@@ -500,11 +435,11 @@ const pageTitle = "Gary Wintle's Portfolio";
 	>
 		<div class="section-titletext-container short-top-text-container">
 			<h2 id="link-about" class="subheading-title">About Me</h2>
-			<img
+			<Image
 				width="376"
 				height="26"
 				class="header-underline"
-				src="/img/template/gw-underline.svg"
+				src={Underline}
 				alt="bezier unlerline decoration"
 			/>
 			<p class="section-body-text">
@@ -563,11 +498,11 @@ const pageTitle = "Gary Wintle's Portfolio";
 		<h2 id="link-lets-talk" class="subheading-title text-ondark">
 			Let's Talk!
 		</h2>
-		<img
+		<Image
 			width="376"
 			height="26"
 			class="header-underline flipped"
-			src="/img/template/gw-underline.svg"
+			src={Underline}
 			alt="bezier unlerline decoration"
 		/>
 		<p class="section-body-text text-ondark lets-talk-text">

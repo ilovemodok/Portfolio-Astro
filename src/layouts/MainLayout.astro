@@ -4,6 +4,7 @@ const { pageTitle } = Astro.props;
 
 
 import { Image } from "astro:assets";
+import lottieBackToTop from "astro-integration-lottie/Lottie.astro";
 
 // Template Assets
 import mainLogo from '../images/template/mainlogo.svg';
@@ -136,6 +137,10 @@ import '../styles/template.css';
 
     <div class="back-to-top">
       <a href="#">
+        <!-- <lottieBackToTop src="/animations/hero-animation.json"
+        autoplay="visible"
+        alt="Back to the top of the page"
+        /> -->
         <!-- <LottieAnimation src="../images/homepage/back-to-top.json" autoplay="visible" /> -->
         <!-- <lottie-player
           id="back-to-top-lottie"

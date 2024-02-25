@@ -1,7 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import LottieHero from "astro-integration-lottie/Lottie.astro";
+
 import { Image } from "astro:assets";
+import LottieHero from "astro-integration-lottie/Lottie.astro";
 
 const pageTitle = "Gary Wintle's Portfolio";
 
@@ -9,10 +10,25 @@ const pageTitle = "Gary Wintle's Portfolio";
 import Underline from '../images/template/bezier-underline.svg';
 
 // Services Images
+
+//-- mediamites
 import mediamiteIllustration from '../images/homepage/mediamites/mediamite-illustration.svg';
 import mediamiteGraphicDesign from '../images/homepage/mediamites/mediamite-graphicdesign.svg';
 import mediamiteWebDesign from '../images/homepage/mediamites/mediamite-webdesign.svg';
 import mediamiteMotionGraphics from '../images/homepage/mediamites/mediamite-mograph.svg';
+
+//-- companylogos
+import iconPhotoshop from '../images/homepage/software-logos/icon-photoshop.svg';
+import iconIllustrator from '../images/homepage/software-logos/icon-illustrator.svg';
+import iconIndesign from '../images/homepage/software-logos/icon-indesign.svg';
+import iconFigma from '../images/homepage/software-logos/icon-figma.svg';
+import iconHTML from '../images/homepage/software-logos/icon-html.svg';
+import iconCSS from '../images/homepage/software-logos/icon-css.svg';
+import iconJavascript from '../images/homepage/software-logos/icon-javascript.svg';
+import iconAfterEffects from '../images/homepage/software-logos/icon-after-effects.svg';
+import iconPremiere from '../images/homepage/software-logos/icon-premiere.svg';
+import iconAudition from '../images/homepage/software-logos/icon-audition.svg';
+import iconLottie from '../images/homepage/software-logos/icon-lottie.svg';
 
 // Portfolio Thumbnails
 import portThumbnail01 from '../images/homepage/portfolio-thumbnails/port-thumbnail-cranimals@2x.png';
@@ -22,17 +38,36 @@ import portThumbnail04 from '../images/homepage/portfolio-thumbnails/port-thumbn
 import portThumbnail05 from '../images/homepage/portfolio-thumbnails/port-thumbnail-bumblebee@2x.png';
 import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png';
 
+// About Me Images
+import aboutMePhoto from '../images/homepage/about-me/aboutme-garywintle.webp';
 
+// Let's Talk!
 
+//-- email
+import emailDefault from '../images/homepage/contact/email-default.svg';
+import emailHover from '../images/homepage/contact/email-hover.svg';
 
+//-- LinkedIn
+import linkedInDefault from '../images/homepage/social-media/social-linkedin-default.svg';
+import linkedInHover from '../images/homepage/social-media/social-linkedin-hover.svg';
+
+//-- Instagram
+import instagramDefault from '../images/homepage/social-media/social-instagram-default.svg';
+import instagramHover from '../images/homepage/social-media/social-instagram-hover.svg';
+
+//-- X/Twitter
+import xDefault from '../images/homepage/social-media/social-x-default.svg';
+import xHover from '../images/homepage/social-media/social-x-hover.svg';
+
+//-- Dribbble
+import dribbbleDefault from '../images/homepage/social-media/social-dribbble-default.svg';
+import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover.svg';
 ---
 
 <MainLayout pageTitle={pageTitle}>
 
 	
-
-
- <!-- ******************************
+<!-- ******************************
       
                     HERO
 
@@ -115,19 +150,19 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 					elevate your brand with a unique look just for you.
 				</p>
 				<div class="small-flex-space" data-tool-tip="Photoshop | Illustrator">
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe Photoshop Icon"
-						src="/img/template/software-logos/icon-photoshop.svg"
+						src={iconPhotoshop}
 					/>
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe Illustrator Icon"
-						src="/img/template/software-logos/icon-illustrator.svg"
+						src={iconIllustrator}
 					/>
 				</div>
 			</div>
@@ -149,12 +184,12 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 					huge volumes for many years.
 				</p>
 				<div class="small-flex-space" data-tool-tip="Indesign">
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe Indesign Icon"
-						src="/img/template/software-logos/icon-indesign.svg"
+						src={iconIndesign}
 					/>
 				</div>
 			</div>
@@ -179,26 +214,34 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 					class="small-flex-space"
 					data-tool-tip="Figma | HTML | CSS | Javascript"
 				>
-					<img
+					<Image
 						class="services-app-logo"
 						alt="Figma Icon"
-						src="/img/template/software-logos/icon-figma.svg"
+						src={iconFigma}
+						width="24"
+						height="24"
 					/>
 
-					<img
+					<Image
 						class="services-app-logo"
 						alt="HTML Icon"
-						src="/img/template/software-logos/icon-html.svg"
+						src={iconHTML}
+						width="24"
+						height="24"
 					/>
-					<img
+					<Image
 						class="services-app-logo"
 						alt="CSS Icon"
-						src="/img/template/software-logos/icon-css.svg"
+						src={iconCSS}
+						width="24"
+						height="24"
 					/>
-					<img
+					<Image
 						class="services-app-logo"
 						alt="Javascript Icon"
-						src="/img/template/software-logos/icon-javascript.svg"
+						src={iconJavascript}
+						width="24"
+						height="24"
 					/>
 				</div>
 			</div>
@@ -224,33 +267,33 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 					class="small-flex-space"
 					data-tool-tip="After Effects | Premiere | Audition | Lottie"
 				>
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe After Effects Icon"
-						src="/img/template/software-logos/icon-after-effects.svg"
+						src={iconAfterEffects}
 					/>
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe Premiere Icon"
-						src="/img/template/software-logos/icon-premiere.svg"
+						src={iconPremiere}
 					/>
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Adobe Audition Icon"
-						src="/img/template/software-logos/icon-audition.svg"
+						src={iconAudition}
 					/>
-					<img
+					<Image
 						width="24"
 						height="24"
 						class="services-app-logo"
 						alt="Lottie Icon"
-						src="/img/template/software-logos/icon-lottie.svg"
+						src={iconLottie}
 					/>
 				</div>
 			</div>
@@ -448,10 +491,10 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 		</div>
 		<div class="about-me-grid">
 			<div class="about-me-selfie-container">
-				<img
+				<Image
 					class="about-me-selfie"
-					alt="Photo of Gary Wintle"
-					src="/img/template/aboutme-garywintle.webp"
+					alt="Gary Wintle"
+					src={aboutMePhoto}
 					loading="lazy"
 				/>
 			</div>
@@ -515,15 +558,15 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 				href="mailto:&#104;&#101;&#121;&#064;&#103;&#097;&#114;&#121;&#119;&#105;&#110;&#116;&#108;&#101;&#046;&#099;&#111;&#109;?subject=Hey%20Gary%20Wintle!"
 				target="_top"
 			>
-				<img
+				<Image
 					class="call-to-action-btn social-media-btn default-svg"
-					src="/img/template/contact-svgs/call-to-action-btn.svg"
+					src={emailDefault}
 					alt="Link to Email Gary Wintle"
 				/>
-				<img
+				<Image
 					class="call-to-action-btn social-media-btn hover-svg"
-					src="/img/template/contact-svgs/call-to-action-btn-hover.svg"
-					alt="Gary Wintle's Linkedin Account"
+					src={emailHover}
+					alt="Link to Email Gary Wintle"
 				/>
 			</a>
 		</div>
@@ -531,21 +574,26 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 		<!-- Social Buttons -->
 
 		<div class="social-media-flex">
+
 			<!-- linkedin -->
 			<div class="svg-rollover">
 				<a
 					href="https://www.linkedin.com/in/gary-wintle-9168962/"
 					target="_blank"
 				>
-					<img
+					<Image
 						class="social-media-btn default-svg"
-						src="/img/template/social-svgs/social-linkedin-default.svg"
+						src={linkedInDefault}
 						alt="Gary Wintle's Linkedin Account"
+						width="62"
+						height="62"
 					/>
-					<img
+					<Image
 						class="social-media-btn hover-svg"
-						src="/img/template/social-svgs/social-linkedin-hover.svg"
+						src={linkedInHover}
 						alt="Gary Wintle's Linkedin Account"
+						width="62"
+						height="62"
 					/>
 				</a>
 			</div>
@@ -553,15 +601,19 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 			<!-- instagram -->
 			<div class="svg-rollover">
 				<a href="https://www.instagram.com/garywintle/" target="_blank">
-					<img
+					<Image
 						class="social-media-btn default-svg"
-						src="/img/template/social-svgs/social-instagram-default.svg"
+						src={instagramDefault}
 						alt="Gary Wintle's Instagram Account"
+						width="62"
+						height="62"
 					/>
-					<img
+					<Image
 						class="social-media-btn hover-svg"
-						src="/img/template/social-svgs/social-instagram-hover.svg"
+						src={instagramHover}
 						alt="Gary Wintle's Instagram Account"
+						width="62"
+						height="62"
 					/>
 				</a>
 			</div>
@@ -569,15 +621,19 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 			<!-- Twitter/X -->
 			<div class="svg-rollover">
 				<a href="https://twitter.com/GaryWintle" target="_blank">
-					<img
+					<Image
 						class="social-media-btn default-svg"
-						src="/img/template/social-svgs/social-x-default.svg"
+						src={xDefault}
 						alt="Gary Wintle's X Account"
+						width="62"
+						height="62"
 					/>
-					<img
+					<Image
 						class="social-media-btn hover-svg"
-						src="/img/template/social-svgs/social-x-hover.svg"
+						src={xHover}
 						alt="Gary Wintle's X Account"
+						width="62"
+						height="62"
 					/>
 				</a>
 			</div>
@@ -585,15 +641,20 @@ import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbn
 			<!-- Dribbble -->
 			<div class="svg-rollover">
 				<a href="https://dribbble.com/GaryWintle" target="_blank">
-					<img
+					<Image
 						class="social-media-btn default-svg"
-						src="/img/template/social-svgs/social-dribbble-default.svg"
+						src={dribbbleDefault}
 						alt="Gary Wintle's Dribbble Account"
+						width="62"
+						height="62"
+						
 					/>
-					<img
+					<Image
 						class="social-media-btn hover-svg"
-						src="/img/template/social-svgs/social-dribbble-hover.svg"
+						src={dribbbleHover}
 						alt="Gary Wintle's Dribbble Account"
+						width="62"
+						height="62"
 					/>
 				</a>
 			</div>

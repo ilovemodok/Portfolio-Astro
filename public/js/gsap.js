@@ -20,14 +20,14 @@ gsap.from(".mediamite-img", {
     trigger: "#link-services",
     start: "top 80%",
     end: "top 30%",
-    markers: false,
+    markers: true,
     toggleActions: "restart none none none",
     // onEnter onLeave onEnterBack onLeaveBack
   },
 });
 
-gsap.from(".gw-lottie", {
+gsap.from(".hero-image-box", {
   opacity: 0,
-  duration: 0.3,
+  duration: 1,
   ease: "power1.out",
 });

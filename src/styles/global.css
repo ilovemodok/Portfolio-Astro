@@ -55,26 +55,16 @@ body {
     background-position: 0% 50%;
   }
 }
+
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
 
-a {
-  color: var(--gw-700);
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-}
-
 h1 {
   font-weight: 800;
-  font-size: 6.8rem;
-  line-height: 1.12;
-  letter-spacing: -0.009em;
+  font-size: 8.4rem;
+  line-height: 106%;
+  /* letter-spacing: -0.009em; */
   /* text-transform: uppercase; */
   color: var(--gw-000);
   margin-bottom: 2.8rem;
@@ -87,9 +77,13 @@ h2 {
   color: var(--gw-800);
 }
 
+h3 {
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
-  /* display: block; */
+  color: var(--gw-700);
 }
 
 ul {
@@ -98,54 +92,57 @@ ul {
   padding: 0;
 }
 
-.header-underline {
-  display: block;
-  margin: 0.8rem auto 4.8rem auto;
-  opacity: 0.9;
-}
-
-.flipped {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.section-body-text {
-  font-weight: 500;
-  font-size: 2rem;
-  color: var(--gw-900);
-  text-align: center;
-  margin: 0 auto 0 auto;
-  max-width: 75%;
-}
-
-.gradient-text {
-  background: linear-gradient(140deg, #a8d2f4 -7%, #fcfdfd 33%, #a8d2f4 40%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  display: inline-block;
-  color: rgba(0, 0, 0, 0);
-  background-attachment: fixed;
-}
-
-.drop-shadow {
-  box-shadow: 0 0.2rem 0.4rem #12283a30;
-}
-
 .section-container {
   margin: 0 auto 0 auto;
   max-width: 130rem;
   padding: 0 3.2rem;
 }
 
+.section-body-text {
+  font-size: 2rem;
+  color: var(--gw-900);
+  margin: 0 auto 0 auto;
+  max-width: 75%;
+  text-align: center;
+}
+
+/* The div that hold the title, underline and heading description of each section */
 .section-titletext-container {
   margin: 25.6rem 0 12.8rem 0;
 }
 
+/* The bezier underline */
+.header-underline {
+  display: block;
+  margin: 0.8rem auto 4.8rem auto;
+  opacity: 0.9;
+}
+
+/*******************************/
+/* MODS- Used to change/enhance any item */
+/*******************************/
+
+/* All purpose drop shadow add-on */
+.drop-shadow {
+  box-shadow: 0 0.2rem 0.4rem #12283a30;
+}
+
+/* Used for hero text */
+.gradient-text {
+  background: linear-gradient(140deg, #a8d2f4 -7%, #fcfdfd 33%, #a8d2f4 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-block;
+  background-attachment: fixed;
+}
+
+/* Modifies the top margin of the "white" sections. Fix this to nth sections in the future */
 .short-top-text-container {
   margin-top: 16rem;
 }
 
-.small-flex-space {
-  display: flex;
-  gap: 0.8rem;
+/* This reverses the bezier underline */
+.flipped {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }

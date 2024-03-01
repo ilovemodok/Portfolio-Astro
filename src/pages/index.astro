@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 import { Image } from "astro:assets";
 import LottieHero from "astro-integration-lottie/Lottie.astro";
+import LottiePencil from "astro-integration-lottie/Lottie.astro";
 
 const pageTitle = "Gary Wintle's Portfolio";
 
@@ -66,6 +67,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
 <MainLayout pageTitle={pageTitle}>
 
+
 	
 <!-- ******************************
       
@@ -73,13 +75,16 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
       ****************************** -->
 	
+			<script defer src="../scripts/lottie-tester.js"></script>
+			<!-- <script defer src="/js/gsap.js"></script> -->
+			<!-- <script src="../scripts/gsap.js"></script> -->
 
 			      <section class="section-hero">
         <div class="hero">
           <!-- hero text box -->
 
           <div class="hero-text-box">
-            <h1 class="gradient-text">A Designer and an Artist All in One?</h1>
+            <h1 class="gradient-text">A Designer & Artist All in One?</h1>
             <p class="hero-description">
               Building a unique brand comes with so many questions and
               frustrations, right? Let me help you out with all that print and
@@ -100,11 +105,10 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
           </div>
 
           <!-- hero image box -->
-
-          <div class="hero-image-box">
+						<div class="hero-image-box">
 						<LottieHero src="/animations/hero-animation.json" 
 						autoplay="visible" 
-						id="hero-animation"/>
+						id="hero-animations"/>
           </div>
         </div>
       </section>
@@ -116,7 +120,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
 		****************************** -->
 
-	<section aria-labelledby="link-services" class="section-container">
+	<section class="section-container">
 		<div class="section-titletext-container short-top-text-container">
 			<h2 id="link-services" class="subheading-title">Services</h2>
 			<Image
@@ -473,7 +477,6 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 		****************************** -->
 
 	<section
-		aria-labelledby="link-about"
 		class="section-container additional-bottom-margin"
 	>
 		<div class="section-titletext-container short-top-text-container">
@@ -518,15 +521,15 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					with.
 				</p>
 
-				<lottie-player
-					class="about-me-pencil"
-					id="firstLottie"
-					src="/img/lottie/GW-pencil-2023-01.json"
-				></lottie-player>
+				<div id="lottie-pencil-scroll-container">
+					<LottiePencil src="/animations/lottie-pencil.json"
+autoplay="visible"
+id="firstLottie"
+loop="false"
+player="full"/>
 			</div>
 			<!-- tester -->
-			<div id="lottie-pencil-scroll-container">
-				<div id="lottie-pencil-scroll"></div>
+
 			</div>
 		</div>
 	</section>
@@ -537,8 +540,8 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
 		****************************** -->
 
-	<section aria-labelledby="link-lets-talk" class="last-container">
-		<h2 id="link-lets-talk" class="subheading-title text-ondark">
+	<section class="last-container">
+		<div><h2 id="link-lets-talk" class="subheading-title text-ondark">
 			Let's Talk!
 		</h2>
 		<Image
@@ -550,7 +553,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 		/>
 		<p class="section-body-text text-ondark lets-talk-text">
 			Email me and I'll get back to you within 24 hours.
-		</p>
+		</p></div>
 
 		<!-- email button -->
 		<div class="svg-rollover">

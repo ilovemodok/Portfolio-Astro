@@ -1,11 +1,10 @@
 ---
+
+// Makes titles unique for each page
 const { pageTitle } = Astro.props;
 
-
-
+//Sets up Image optimization
 import { Image } from "astro:assets";
-
-
 
 // Template Assets
 import mainLogo from '../images/template/mainlogo.svg';
@@ -13,16 +12,19 @@ import menu from '../images/template/mobile-menu.svg';
 import menuClose from '../images/template/mobile-menu-close.svg';
 
 //CSS Styles
-
 import '../styles/global.css';
 import '../styles/style.css';
 import '../styles/queries.css';
-
 
 ---
 
 <html lang="en">
 	<head>
+
+    <!-- ***************
+      METADATA
+******************** -->
+
 		<meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -37,9 +39,41 @@ import '../styles/queries.css';
     />
     <meta name="author" content="Gary Wintle" />
 
-    		<!-- GSap -->
+<!-- ***************
+      BROWSER ICON STUFF
+******************** -->
 
-<script
+<!-- Browser Icon -->
+<link rel="icon" href="/img/favicon-02.svg" type="image/svg" />
+
+<!-- Apple Mobile Icon -->
+    <link rel="apple-touch-icon" href="/img/icon-files/GW-logo-apple.png" />
+
+<!-- Android Mobile Icon -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+<!-- Apple Top Bar Colour -->
+    <meta name="theme-color" content="#12283a" />
+
+
+<!-- ***************
+      JAVASCRIPT
+******************** -->
+
+<!-- Astro -->
+    <meta name="generator" content={Astro.generator} />
+
+<!-- Lottie -->
+    <script  src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
+
+    <script defer src="/js/lottie-tester.js"></script>
+
+<!-- GSap -->
+    <script
         defer
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
       ></script>
@@ -52,10 +86,11 @@ import '../styles/queries.css';
         src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"
       ></script>
       <script defer src="/js/gsap.js"></script>
-<!-- GSap Ends -->
 
-		<meta name="generator" content={Astro.generator} />
+<!-- Lightbox -->
+    <link href="/lightbox/css/lightbox.css" rel="stylesheet" />
 
+<!-- Font Stuff -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,38 +98,23 @@ import '../styles/queries.css';
       rel="stylesheet"
     />
 
-    
-	
-    <link href="/lightbox/css/lightbox.css" rel="stylesheet" />
-
-		<!-- Lottie -->
-    <script  src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
-
-    <script defer src="../js/lottie-tester.js"></script>
-
+<!-- Smooth Scrolling -->
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
 
-
-
+<!-- Generic -->
     <script src="../scripts/script.js"></script>
-    <script type="module" src="../main.js"></script>
+
+
+
+
+
+
     
 
 
-
-
-		<link rel="icon" href="/img/favicon-02.svg" type="image/svg" />
-    <link rel="apple-touch-icon" href="/img/icon-files/GW-logo-apple.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
-
-    <meta name="theme-color" content="#12283a" />
 		
 		<title>{pageTitle}</title>
 	</head>

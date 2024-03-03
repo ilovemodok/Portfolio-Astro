@@ -28,10 +28,10 @@ LottieInteractivity.create({
 });
 
 // Back to Top Button
+
 LottieInteractivity.create({
   player: "#back-to-top-lottie",
   mode: "cursor",
-  // container: "#pencil-anim",
   actions: [
     {
       type: "hover",

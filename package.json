@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@lottiefiles/lottie-interactivity": "^1.6.2",
     "astro": "^4.4.3",
     "astro-integration-lottie": "^0.2.3",
     "bodymovin": "^4.13.0",
-    "lottie-web": "^5.12.2"
+    "lottie-web": "^5.12.2",
+    "svelte": "^4.2.12"
   }
 }

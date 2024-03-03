@@ -1,10 +1,12 @@
 ---
 
+
 // Makes titles unique for each page
 const { pageTitle } = Astro.props;
 
 //Sets up Image optimization
 import { Image } from "astro:assets";
+
 
 // Template Assets
 import mainLogo from '../images/template/mainlogo.svg';
@@ -16,12 +18,16 @@ import '../styles/global.css';
 import '../styles/style.css';
 import '../styles/queries.css';
 
+
+
 ---
 
 <html lang="en">
 	<head>
 
-    <!-- ***************
+
+
+<!-- ***************
       METADATA
 ******************** -->
 
@@ -64,13 +70,16 @@ import '../styles/queries.css';
     <meta name="generator" content={Astro.generator} />
 
 <!-- Lottie -->
-    <script  src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script defer src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
 
-    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-    <script defer src="/js/lottie-tester.js"></script>
+<script is:inline src="/js/lottie-tester.js"></script>
+
+ 
+
+  
 
 <!-- GSap -->
     <script
@@ -121,7 +130,7 @@ import '../styles/queries.css';
 	<body>
 
 		<div class="header-background">
-      <header class="header nav-open//">
+      <header class="header">
         <a href="https://garywintle.com/"
           ><Image
           loading="eager"
@@ -166,18 +175,14 @@ import '../styles/queries.css';
 
     <div class="back-to-top">
       <a href="#">
-        <!-- <lottieBackToTop src="/animations/hero-animation.json"
-        autoplay="visible"
-        alt="Back to the top of the page"
-        /> -->
-        <!-- <LottieAnimation src="../images/homepage/back-to-top.json" autoplay="visible" /> -->
-        <!-- <lottie-player
+<lottie-player
           id="back-to-top-lottie"
-          src="../images/homepage/gwhero-test-05.json"
+          src="/animations/back-to-top.json"
           background="transparent"
           speed="2"
           alt="Back to the top of the page"
-        ></lottie-player> -->
+          autoplay
+        ></lottie-player>
       </a>
     </div>
 
@@ -194,5 +199,9 @@ import '../styles/queries.css';
         designed, animated, and coded by hand. All rights reserved.</span
       >
     </footer>
-	</body>
+
+    <script>
+      console.log(document.querySelector("#back-to-top-lottie"));</script>
+
+ </body>
 </html>

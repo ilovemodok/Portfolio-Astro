@@ -450,6 +450,11 @@ Instead, 1rem = 1em = 16px*/
     z-index: 2;
   }
 
+  .hero-image-box {
+  }
+  .gw-lottie {
+  }
+
   .main-nav-list {
     flex-direction: column;
     gap: 12rem;

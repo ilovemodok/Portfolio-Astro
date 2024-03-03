@@ -1,11 +1,13 @@
 ---
+
 import MainLayout from "../layouts/MainLayout.astro"
 
 import { Image } from "astro:assets";
-import LottieHero from "astro-integration-lottie/Lottie.astro";
-import LottiePencil from "astro-integration-lottie/Lottie.astro";
+// import lottie from 'lottie-web';
+// import LottieHero from "astro-integration-lottie/Lottie.astro";
+// import LottiePencil from "astro-integration-lottie/Lottie.astro";
 
-const pageTitle = "Gary Wintle's Portfolio";
+const pageTitle = "Gary Wintle";
 
 // Template Images
 import Underline from '../images/template/bezier-underline.svg';
@@ -76,14 +78,16 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
       ****************************** -->
 	
 			<script defer src="../scripts/lottie-tester.js"></script>
+
+			
 			<!-- <script defer src="/js/gsap.js"></script> -->
 			<!-- <script src="../scripts/gsap.js"></script> -->
 
 			      <section class="section-hero">
         <div class="hero">
-          <!-- hero text box -->
 
-          <div class="hero-text-box">
+          <!-- hero text box -->
+<div class="hero-text-box">
             <h1 class="gradient-text">A Designer & Artist All in One?</h1>
             <p class="hero-description">
               Building a unique brand comes with so many questions and
@@ -92,6 +96,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
             </p>
 
             <div class="hero-buttons-spacing">
+
               <!-- Call to Action -->
               <a class="hero-nav-link drop-shadow" href="#link-lets-talk"
                 >Let's Talk!</a
@@ -106,9 +111,19 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
           <!-- hero image box -->
 						<div class="hero-image-box">
-						<LottieHero src="/animations/hero-animation.json" 
+							<!-- <img src="/animations/test.webp" alt=""> -->
+							<lottie-player
+              src="/animations/hero-animation.json"
+              class="gw-lottie"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              alt="Animation of an illustrated Gary"
+            ></lottie-player>
+						<!-- <LottieHero src="/animations/hero-animation.json" 
 						autoplay="visible" 
-						id="hero-animations"/>
+						id="hero-animations"/> -->
           </div>
         </div>
       </section>
@@ -521,12 +536,12 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					with.
 				</p>
 
-				<div id="lottie-pencil-scroll-container">
+				<!-- <div id="lottie-pencil-scroll-container">
 					<LottiePencil src="/animations/lottie-pencil.json"
 autoplay="visible"
 id="firstLottie"
 loop="false"
-player="full"/>
+player="full"/> -->
 			</div>
 			<!-- tester -->
 

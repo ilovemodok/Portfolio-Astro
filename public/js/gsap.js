@@ -1,12 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".port-image", {
-  duration: 1,
-  x: "-100vw",
-  stagger: 0.5,
-  ease: "back.out(1.7)",
-  scrollTrigger: ".port-image",
-});
+// gsap.from(".port-image", {
+//   duration: 1,
+//   x: "-100vw",
+//   stagger: 0.5,
+//   ease: "back.out(1.7)",
+//   scrollTrigger: ".port-image",
+// });
 
 gsap.from(".mediamite-img", {
   delay: 0.3,

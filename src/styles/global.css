@@ -145,6 +145,19 @@ ul {
   opacity: 0.9;
 }
 
+/* Anchor Links */
+#services {
+  scroll-margin-top: 10rem;
+}
+#portfolio {
+  scroll-margin-top: 12rem;
+}
+#about {
+  scroll-margin-top: 6rem;
+}
+#lets-talk {
+  scroll-margin-top: 0;
+}
 /*******************************/
 /* MODS- Used to change/enhance any item */
 /*******************************/

@@ -28,10 +28,27 @@ LottieInteractivity.create({
 });
 
 // Back to Top Button
+// const player = document.getElementById("btt");
+
+// player.addEventListener("ready", () => {
+//   LottieInteractivity.create({
+//     player: "#btt",
+//     mode: "cursor",
+//     actions: [
+//       {
+//         type: "hover",
+//         forceFlag: true,
+//       },
+//     ],
+//   });
+// });
+
+// const lottiePlayer = document.getElementById("btt");
 
 LottieInteractivity.create({
-  player: "#back-to-top-lottie",
+  player: "#btt",
   mode: "cursor",
+  // container: "#pencil-anim",
   actions: [
     {
       type: "hover",
@@ -41,7 +58,7 @@ LottieInteractivity.create({
 });
 
 LottieInteractivity.create({
-  player: "#back-to-top-lottie",
+  player: "#btt",
   mode: "cursor",
   // container: "#pencil-anim",
   actions: [

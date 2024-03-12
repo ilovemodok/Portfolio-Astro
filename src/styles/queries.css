@@ -13,7 +13,7 @@ Instead, 1rem = 1em = 16px*/
 
   h1 {
     font-size: 7.4rem;
-    line-height: 120%;
+    line-height: 110%;
   }
 
   .section-titletext-container {
@@ -87,7 +87,7 @@ Instead, 1rem = 1em = 16px*/
 
   .about-me-selfie {
     width: 40rem;
-    height: 40rem;
+    height: auto;
   }
 
   .about-me-selfie-container::before {
@@ -113,8 +113,8 @@ Instead, 1rem = 1em = 16px*/
   }
 
   h1 {
-    font-size: 5.9rem;
-    line-height: 6.8rem;
+    font-size: 8.4rem;
+    line-height: 115%;
     text-align: center;
   }
 
@@ -292,16 +292,13 @@ Instead, 1rem = 1em = 16px*/
   }
 
   .about-me-selfie {
-    width: 50rem;
-    height: 50rem;
-    box-shadow: 0 0.3rem 0.5rem #12283a0d;
-    margin: -4rem 0 4rem -2rem;
-  }
-
-  .about-me-selfie-container::before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-47%, -54%);
+    width: 35rem;
+    height: auto;
+    rotate: 1deg;
+    box-shadow: 1rem 1rem 0rem #4294d7e1;
+    /* box-shadow: 0 0.3rem 0.5rem #12283a0d;
+    margin: -4rem 0 4rem -2rem; */
+    margin-bottom: 5rem;
   }
 
   .about-me-bodytext {
@@ -391,15 +388,14 @@ Instead, 1rem = 1em = 16px*/
     left: 0; */
     width: 100%;
     height: 100vh;
-    transform: translateX(100%);
+    transform: translateY(100%);
     z-index: 3;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s cubic-bezier(0.56, 0.095, 0.33, 0.98);
 
     /* hide navigation */
     /* Allows NO transitions at all */
@@ -423,7 +419,7 @@ Instead, 1rem = 1em = 16px*/
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   .icon-mobile-nav {
@@ -439,8 +435,23 @@ Instead, 1rem = 1em = 16px*/
     display: none;
   }
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7.5rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: #12283ad0;
+    /* filter: drop-shadow(0px 2px 4px #173f5f33); */
+    z-index: 999;
+    transition: 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
   .back-to-top {
-    width: 2.4rem;
+    width: 1rem;
+    height: auto;
     position: fixed;
     bottom: 1.2rem;
     right: 1.2rem;
@@ -450,19 +461,20 @@ Instead, 1rem = 1em = 16px*/
     z-index: 2;
   }
 
-  .hero-image-box {
-  }
-  .gw-lottie {
+  #btt {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    transition: scale 0.2s ease-in-out;
   }
 
   .main-nav-list {
     flex-direction: column;
-    gap: 12rem;
+    gap: 10rem;
   }
 
   .main-nav-link:link,
   .main-nav-link:visited {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .main-nav-link.nav-cta,
@@ -526,7 +538,7 @@ Instead, 1rem = 1em = 16px*/
 
   .header-underline {
     margin: 0.8rem auto 3.2rem auto;
-    width: 34rem;
+    width: 75%;
   }
 
   .section-body-text {
@@ -541,15 +553,15 @@ Instead, 1rem = 1em = 16px*/
   /* hero */
 
   h1 {
-    font-size: 5.5rem;
-    line-height: 6.2rem;
+    font-size: 7rem;
+    line-height: 110%;
     padding: 0 4.8rem;
   }
 
   .hero-image-box {
     width: 100%;
     /* transform: scale(110%); */
-    margin: 2.4rem 0 4.8rem 0;
+    margin: 7.2rem 0 4.8rem 0;
   }
 
   .hero-description {
@@ -603,7 +615,7 @@ Instead, 1rem = 1em = 16px*/
 
   .portfolio-card {
     width: 48rem;
-    height: 70rem;
+    height: 75rem;
     border: solid 0.3rem #15456c8f;
   }
 
@@ -612,22 +624,22 @@ Instead, 1rem = 1em = 16px*/
   }
 
   .port-type-title {
-    margin-top: 1.2rem;
-    font-size: 3.8rem;
+    margin-top: 1.4rem;
+    font-size: 4rem;
   }
 
   .port-type-subtitle {
     font-weight: 600;
-    font-size: 2rem;
-    line-height: 1.8rem;
+    font-size: 2.4rem;
+    line-height: 1.1;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
     color: var(--gw-500);
   }
 
   .port-body {
-    font-size: 1.8rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 1.5;
   }
 
   /* About Me */
@@ -673,21 +685,32 @@ Instead, 1rem = 1em = 16px*/
 
   @media (max-width: 34em) {
     h1 {
-      font-size: 4.5rem;
-      line-height: 115%;
+      font-size: 7.2rem;
+      line-height: 105%;
       padding: 0 2.4rem;
     }
 
-    .section-hero {
-      padding-bottom: 4.8rem;
+    body {
+      line-height: 1.4;
     }
 
-    .hero-image-box {
-      /* overflow-x: clip; */
+    .hero-description {
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+
+    .back-to-top {
+      width: 3.4rem;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .section-hero {
+      padding-bottom: 8.4rem;
     }
 
     .gw-lottie {
-      /* scale: 110%; */
+      scale: 110%;
     }
 
     .hero-description {
@@ -744,7 +767,7 @@ Instead, 1rem = 1em = 16px*/
     .portfolio-card {
       border: solid 0.3rem #15456c8f;
       width: 34.2rem;
-      height: 58rem;
+      height: 60rem;
     }
 
     .port-thumbnail-textbox {
@@ -763,13 +786,13 @@ Instead, 1rem = 1em = 16px*/
     }
 
     .port-type-subtitle {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
 
     .port-body {
       font-weight: 500;
-      font-size: 1.8rem;
-      line-height: 3rem;
+      font-size: 2rem;
+      line-height: 1.5;
       color: var(--gw-400);
       margin-bottom: 2.4rem;
       text-align: center;
@@ -790,17 +813,22 @@ Instead, 1rem = 1em = 16px*/
     }
 
     .about-me-selfie {
-      width: 33rem;
-      height: 33rem;
+      width: 80%;
+      height: auto;
       justify-self: center;
+      margin: 0 auto 4rem auto;
+      display: block;
     }
 
-    .about-me-selfie-container::before {
-      transform: translate(-47%, -59%);
+    .about-me-selfie-container {
+      justify-self: center;
+      margin: 0 auto 4rem auto;
+      display: block;
     }
 
     .about-me-bodytext {
-      font-size: 1.6rem;
+      font-size: 2rem;
+      line-height: 1.5;
     }
 
     .lottie-pencil {
@@ -816,10 +844,14 @@ Instead, 1rem = 1em = 16px*/
       margin-right: -3rem; */
     }
 
+    .additional-bottom-margin {
+      margin-bottom: 0.5rem;
+    }
+
     /* Let's Talk */
 
     .call-to-action-btn {
-      width: 85%;
+      width: 90%;
     }
   }
 }

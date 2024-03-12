@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 
 
 // Template Assets
-import mainLogo from '../images/template/mainlogo.svg';
+import mainLogo from '../images/template/garywintlelogo.svg';
 import menu from '../images/template/mobile-menu.svg';
 import menuClose from '../images/template/mobile-menu-close.svg';
 
@@ -50,13 +50,13 @@ import '../styles/queries.css';
 ******************** -->
 
 <!-- Browser Icon -->
-<link rel="icon" href="/img/favicon-02.svg" type="image/svg" />
+<link rel="icon" href="/favicon.svg" type="image/svg" />
 
 <!-- Apple Mobile Icon -->
     <link rel="apple-touch-icon" href="/img/icon-files/GW-logo-apple.png" />
 
 <!-- Android Mobile Icon -->
-    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- <link rel="manifest" href="manifest.webmanifest" /> -->
 
 <!-- Apple Top Bar Colour -->
     <meta name="theme-color" content="#12283a" />
@@ -71,15 +71,12 @@ import '../styles/queries.css';
 
 <!-- Lottie -->
 
-<script defer src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+<script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
 
-    <script defer src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
-<script is:inline src="/js/lottie-tester.js"></script>
+    <script defer src="/js/lottie-inter.js"></script>
 
- 
-
-  
 
 <!-- GSap -->
     <script
@@ -108,50 +105,63 @@ import '../styles/queries.css';
     />
 
 <!-- Smooth Scrolling -->
-    <script
+    <!-- <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
+    ></script> -->
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.9/dist/smoothscroll.min.js"></script>
+
+    <script>
+      smoothscroll.polyfill();
+    </script>
+
+
 
 <!-- Generic -->
     <script src="../scripts/script.js"></script>
 
 
-
-
-
-
-    
-
-
-		
-		<title>{pageTitle}</title>
+    <title>{pageTitle}</title>
 	</head>
 	<body>
+    
+<!-- HEADER LOGO -->
 
 		<div class="header-background">
-      <header class="header">
+      <header class="header sticky">
         <a href="https://garywintle.com/"
           ><Image
           loading="eager"
             class="main-logo"
             alt="Gary Wintle Logo"
             src={mainLogo}
-        /></a>
+             /></a>
+
+        <!-- NAVIGATION -->
+
         <nav class="main-nav">
           <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="#link-services">Services</a></li>
-            <li><a class="main-nav-link" href="#link-port">Portfolio</a></li>
-            <li><a class="main-nav-link" href="#link-about">About</a></li>
-            <li>
-              <a
-                class="main-nav-link nav-cta hero-talk drop-shadow"
-                href="#link-lets-talk"
+<!-- Services -->
+            <li><a href="#link-services"
+              class="main-nav-link">Services</a></li>
+<!-- Portfolio -->
+            <li><a class="main-nav-link" href="#portfolio">Portfolio</a></li>
+<!-- About -->
+            <li><a class="main-nav-link" href="https://www.garywintle.com/#link-about">About</a></li>
+<!-- Let's Talk -->
+            <li><a
+                class="main-nav-link nav-cta drop-shadow"
+                href="https://www.garywintle.com/#link-lets-talk"
                 >Let's Talk!</a
               >
             </li>
           </ul>
         </nav>
+      
+
+        <!-- MOBILE NAV COMPONENTS -->
+
         <button class="btn-mobile-nav">
             <!-- "menu-icon" was name instead of id before -->
           <Image
@@ -171,17 +181,18 @@ import '../styles/queries.css';
       </header>
     </div>
 
-    <!-- Back to Top Button -->
+    <!-- BACK TO TOP BUTTON -->
 
     <div class="back-to-top">
       <a href="#">
 <lottie-player
-          id="back-to-top-lottie"
+          id="btt"
+          role="back to top"
           src="/animations/back-to-top.json"
           background="transparent"
           speed="2"
           alt="Back to the top of the page"
-          autoplay
+
         ></lottie-player>
       </a>
     </div>
@@ -192,7 +203,8 @@ import '../styles/queries.css';
 	<slot />
 
  <!-- END OF CONTENT -->
-    <!-- *****Footer***** -->
+
+    <!-- ***** FOOTER ***** -->
 		<footer class="footer-container">
       <span class="footer-text"
         >© <span class="year">0000</span> Gary Wintle Inc. Illustrated,
@@ -200,8 +212,13 @@ import '../styles/queries.css';
       >
     </footer>
 
-    <script>
-      console.log(document.querySelector("#back-to-top-lottie"));</script>
+    <script>// Current Year Footer
+      const yearEl = document.querySelector(".year");
+      const currentYear = new Date().getFullYear();
+      yearEl.textContent = new Date().getFullYear();
+      </script>
+
+
 
  </body>
 </html>

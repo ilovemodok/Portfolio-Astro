@@ -33,9 +33,8 @@ import '../styles/queries-port.css';
 <MainLayout pageTitle={pageTitle}><!-- START OF CONTENT -->
 
   <!-- Opener -->
-  <main>
-    <article>
-      <section class="port-grid opener-grid portfolio-wrapper">
+  <main class="portfolio-wrapper">
+      <section class="port-grid opener-grid section-margin">
         <div class="opener-title">
           <h1 class="port-title">
             {pageTitle}: <span>Designing Charlie</span>
@@ -78,134 +77,23 @@ import '../styles/queries-port.css';
         </div>
       </section>
 
-      <!-- Initial Sketches -->
-      <div class="bg-extender">
-        <section class="port-grid --1square-text-right portfolio-wrapper">
-          <div class="port-grid --4square">
-            <div class="port-image">
-              <a
-                href="/img/portfolio/cranimals/cranimals-sketch-01.webp"
-                data-lightbox="image-1"
-                ><Image
-                  alt="Cranimals Zen Dogfood Early Sketch"
-                  src={section0101}
-                  decoding="async"
-              /></a>
-            </div>
-            <div class="port-image">
-              <Image
-                alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0102}
-                decoding="async"
-              />
-            </div>
-            <div class="port-image">
-              <Image
-                alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0103}
-                decoding="async"
-              />
-            </div>
-            <div class="port-image">
-              <Image
-                alt="Cranimals Zen Dogfood Early Sketch"
-                src={section0104}
-                decoding="async"
-              />
-            </div>
-          </div>
-          <div class="case-info">
-            <h2 class="port-sub-title --title-on-dark">Initial Sketches</h2>
-            <p class="port-body-text port-text-on-dark">
-              I went to work right with zen thoughts in mind.
-            </p>
-            <p class="port-body-text port-text-on-dark">
-              Mixing cute doggy character packaging we often see in the aisles
-              with something a little serene seemed like the best path to
-              take.
-            </p>
-          </div>
-        </section>
-      </div>
+      <!-- Chapter 1 -->
 
-      <!-- final Sketches -->
-      <section class="port-grid --1square-text-left portfolio-wrapper">
-        <div class="case-info">
-          <h2 class="port-sub-title">Finalizing the Look</h2>
-          <p class="port-body-text">
-            We decided on which parts of which sketches were what they wanted
-            in their final character design.
-          </p>
-          <p class="port-body-text">
-            They added that they'd like Charlie sitting on a giant pumpkin
-            surrounded by cranberries since those were both key ingredients to
-            their vegan dog food.
-          </p>
-          <p class="port-body-text">
-            I was happy to customize the art to their liking!
-          </p>
-        </div>
-        <div class="port-image">
-          <img
-            alt="Cranimals Zen Dogfood"
-            src="/img/portfolio/cranimals/cranimals-finalsketch.webp"
-          />
-        </div>
+    <section class="chapter section-margin">
+      
+        <h2 class="port-chapter-title">Chapter 1: <span>Initial Sketches</span></h2>
+      
+      <div class="bento-container ">
+        <div class="bento-item item1"><Image src={section0102} alt=""></div>
+        <div class="bento-item item2"><Image src={section0103} alt=""></Image></div>
+        <div class="bento-item item3"><Image src={section0101} alt=""></Image></div>
+        <div class="bento-item item4"><Image src={section0104} alt=""></Image></div>   </div>
+        <div class="chapter-text-container">
+          <h2 class="chapter-title">Chapter 1: Initial Sketches</h2>
+        </div>   
+        
+    </section>
+ 
+    
       </section>
-
-      <!-- Final Art -->
-      <div class="bg-extender">
-        <section class="port-grid --1square-text-right portfolio-wrapper">
-          <div class="port-image">
-            <img
-              alt="Cranimals Zen Dogfood"
-              src="/img/portfolio/cranimals/cranimals-final.webp"
-            />
-          </div>
-          <div class="case-info">
-            <h2 class="port-sub-title --title-on-dark">Finalizing the</h2>
-            <p class="port-body-text port-text-on-dark">
-              With the final pencils approved, I went to work on vectoring and
-              coloring the art in Adobe Illustrator. It was a bit of a
-              challenge coming up with colors, but I decided to use the big
-              pumpkin Charlie was now sitting on as inspiration! I was able to
-              play off the oranges not only to design Charlie (with browns
-              that have tints of orange), but also to design the whole
-              package.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Results -->
-      <section
-        class="port-grid portfolio-wrapper --text-top --top-bottom-padding"
-      >
-        <div class="case-info --grid-span">
-          <h2 class="port-sub-title">Pack it in a doggy bag</h2>
-          <p class="port-body-text">
-            Upon final approval, the packaging was set up and printed. The
-            results were great, with Cranimals winning Pet Product New
-            Editor’s Choice 2010 Seal of Approval, even cheekily adding that
-            the ‘animated’ cover model Charlie was a big part of their
-            success. This was a fun team to work with. It also allowed me to
-            use my illustration along with my graphic design skills to come up
-            with a fun concept that had great results. A win for everyone,
-            especially vegan dogs!
-          </p>
-        </div>
-        <div class="port-image">
-          <img
-            alt="Cranimals Zen Dogfood"
-            src="/img/portfolio/cranimals/craminals-packaging.webp"
-          />
-        </div>
-        <div class="port-image">
-          <img
-            alt="Cranimals Zen Dogfood"
-            src="/img/portfolio/cranimals/monica_mads.webp"
-          />
-        </div>
-      </section>
-    </article>
   </main></MainLayout>

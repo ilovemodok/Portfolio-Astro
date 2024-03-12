@@ -1,9 +1,3 @@
-// Current Year Footer
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-console.log(currentYear);
-yearEl.textContent = new Date().getFullYear();
-
 // Mobile Nav
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -42,6 +36,58 @@ allLinks.forEach(function (link) {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const allLinks = document.querySelectorAll("nav a");
+
+//   allLinks.forEach(function (link) {
+//     link.addEventListener("click", function (e) {
+//       const href = link.getAttribute("href");
+
+//       // Check if the link is pointing to a section within the same page
+//       const isInternalAnchorLink = href.startsWith("#");
+
+//       // If it's an internal anchor link, prevent default behavior and handle smooth scrolling
+//       if (isInternalAnchorLink) {
+//         e.preventDefault();
+
+//         // Determine the target element based on the anchor link
+//         const targetId = href.substring(1); // Remove the "#" symbol
+//         const targetElement = document.getElementById(targetId);
+
+//         // Scroll to the target element with smooth behavior
+//         if (targetElement) {
+//           targetElement.scrollIntoView({ behavior: "smooth" });
+//         }
+
+//         // Close mobile navigation on link click
+//         if (link.classList.contains("main-nav-link")) {
+//           headerEl.classList.toggle("nav-open");
+//         }
+//       }
+//     });
+//   });
+// });
+
+// Sticky Nav
+
+// const sectionHeroEl = document.querySelector(".section-hero");
+
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+//     console.log(ent);
+
+//     if (ent.isIntersecting === false) {
+//       document.querySelector(".header").classList.add("sticky");
+//     }
+//   },
+//   {
+//     root: null,
+//     threshold: 0,
+//   }
+// );
+// obs.observe(sectionHeroEl);
+
 // Button Rollovers
 
 const container = document.querySelector(".svg-rollover");
@@ -69,3 +115,8 @@ window.addEventListener("scroll", () => {
     // backToTop.style.visibility = "hidden";
   }
 });
+
+// Current Year Footer
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = new Date().getFullYear();

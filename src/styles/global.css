@@ -1,6 +1,23 @@
+@font-face {
+  font-family: "portfolio";
+  src: url("/fonts/portfolioheavy.woff") format("woff");
+  font-weight: 900;
+  font-style: heavy;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "portfolio";
+  src: url("/fonts/portfoliobold.woff") format("woff");
+  font-weight: 600;
+  font-style: bold;
+  font-display: swap;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   overflow-x: clip;
 }
 
@@ -26,6 +43,7 @@ html {
   --gw-700: #20639b;
   --gw-800: #173f5f;
   --gw-900: #12283a;
+  --gw-shadow: #12283a15;
 }
 
 body {
@@ -56,23 +74,32 @@ body {
   }
 }
 
+.homepage-wrapper {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
 
 h1 {
-  font-weight: 800;
-  font-size: 8.4rem;
-  line-height: 106%;
-  /* letter-spacing: -0.009em; */
+  font-family: "portfolio", poppons, sans-serif;
+  font-weight: 900;
+  font-size: 10.5rem;
+  line-height: 97%;
+  letter-spacing: -0.01em;
   /* text-transform: uppercase; */
   color: var(--gw-000);
   margin-bottom: 2.8rem;
+
+  filter: drop-shadow(0.1rem 0.1rem 0 var(--gw-500));
 }
 
 h2 {
-  font-weight: 700;
-  font-size: 4.8rem;
+  font-family: "portfolio", poppons, sans-serif;
+  font-weight: 900;
+  font-size: 5.8rem;
   text-align: center;
   color: var(--gw-800);
 }

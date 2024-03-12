@@ -15,6 +15,7 @@
     "astro-integration-lottie": "^0.2.3",
     "bodymovin": "^4.13.0",
     "lottie-web": "^5.12.2",
+    "smoothscroll-polyfill": "^0.4.4",
     "svelte": "^4.2.12"
   }
 }

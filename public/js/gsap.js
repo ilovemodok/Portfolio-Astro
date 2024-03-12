@@ -20,7 +20,7 @@ gsap.from(".mediamite-img", {
     trigger: "#link-services",
     start: "top 80%",
     end: "top 30%",
-    markers: true,
+    markers: false,
     toggleActions: "restart none none none",
     // onEnter onLeave onEnterBack onLeaveBack
   },

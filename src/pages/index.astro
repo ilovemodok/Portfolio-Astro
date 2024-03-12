@@ -3,9 +3,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 
 import { Image } from "astro:assets";
-// import lottie from 'lottie-web';
-// import LottieHero from "astro-integration-lottie/Lottie.astro";
-// import LottiePencil from "astro-integration-lottie/Lottie.astro";
+
 
 const pageTitle = "Gary Wintle";
 
@@ -42,7 +40,7 @@ import portThumbnail05 from '../images/homepage/portfolio-thumbnails/port-thumbn
 import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png';
 
 // About Me Images
-import aboutMePhoto from '../images/homepage/about-me/aboutme-garywintle.webp';
+import aboutMePhoto from '../images/homepage/about-me/profile02.jpg';
 
 // Let's Talk!
 
@@ -77,12 +75,8 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
       ****************************** -->
 	
-			<script defer src="../scripts/lottie-tester.js"></script>
 
-			
-			<!-- <script defer src="/js/gsap.js"></script> -->
-			<!-- <script src="../scripts/gsap.js"></script> -->
-
+<main class="homepage-wrapper">
 			      <section class="section-hero">
         <div class="hero">
 
@@ -90,20 +84,19 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 <div class="hero-text-box">
             <h1 class="gradient-text">A Designer & Artist All in One?</h1>
             <p class="hero-description">
-              Building a unique brand comes with so many questions and
-              frustrations, right? Let me help you out with all that print and
-              web design stuff.
+
+							Avoid getting lost in a sea of cookie-cutter brands. Maximize your business' potential with stand out custom print & web design. 
             </p>
 
             <div class="hero-buttons-spacing">
 
               <!-- Call to Action -->
-              <a class="hero-nav-link drop-shadow" href="#link-lets-talk"
+              <a class="hero-nav-link drop-shadow" href="https://www.garywintle.com/#link-lets-talk"
                 >Let's Talk!</a
               >
 
               <!-- Go to Portfolio -->
-              <a class="hero-nav-link port-cta drop-shadow" href="#link-port"
+              <a class="hero-nav-link port-cta drop-shadow" href="https://www.garywintle.com/#link-port"
                 >Go to Portfolio</a
               >
             </div>
@@ -385,7 +378,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					</picture>
 					<div class="port-thumbnail-textbox">
 						<p class="port-type-title">The Surfin' Burrito</p>
-						<p class="port-type-subtitle">mascot | logo | t-shirt design</p>
+						<p class="port-type-subtitle">mascot | logo | t-shirts</p>
 						<p class="port-body">
 							Mascot redesign for Cancun's world-famous burrito stand.
 						</p>
@@ -513,7 +506,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					class="about-me-selfie"
 					alt="Gary Wintle"
 					src={aboutMePhoto}
-					loading="lazy"
+					loading="eager"
 				/>
 			</div>
 			<div class="about-me-flex">
@@ -536,13 +529,12 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					with.
 				</p>
 
-				<!-- <div id="lottie-pencil-scroll-container">
-					<LottiePencil src="/animations/lottie-pencil.json"
-autoplay="visible"
-id="firstLottie"
-loop="false"
-player="full"/> -->
-			</div>
+				<lottie-player
+				class="about-me-pencil"
+				id="firstLottie"
+				src="/animations/lottie-pencil.json"
+			></lottie-player>
+
 			<!-- tester -->
 
 			</div>
@@ -678,4 +670,5 @@ player="full"/> -->
 			</div>
 		</div>
 	</section>
+	</main>
 </MainLayout>

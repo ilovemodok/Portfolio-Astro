@@ -130,7 +130,7 @@ import '../styles/queries.css';
 
 		<div class="header-background">
       <header class="header sticky">
-        <a href="https://garywintle.com/"
+        <a href="/"
           ><Image
           loading="eager"
             class="main-logo"
@@ -183,19 +183,17 @@ import '../styles/queries.css';
 
     <!-- BACK TO TOP BUTTON -->
 
-    <div class="back-to-top">
-      <a href="#">
-<lottie-player
+    <div class="back-to-top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <lottie-player
           id="btt"
-          role="back to top"
+          aria-label="Back to top"
           src="/animations/back-to-top.json"
           background="transparent"
           speed="2"
           alt="Back to the top of the page"
-
-        ></lottie-player>
-      </a>
-    </div>
+></lottie-player>
+       </div>
 
     <!-- START OF CONTENT -->
 
@@ -208,7 +206,7 @@ import '../styles/queries.css';
 		<footer class="footer-container">
       <span class="footer-text"
         >© <span class="year">0000</span> Gary Wintle Inc. Illustrated,
-        designed, animated, and coded by hand. All rights reserved.</span
+        designed, animated, and coded by finger tips. All rights reserved.</span
       >
     </footer>
 

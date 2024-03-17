@@ -3,4 +3,5 @@ import lottie from "astro-integration-lottie";
 
 export default defineConfig({
   integrations: [lottie()],
+  trailingSlash: "always",
 });

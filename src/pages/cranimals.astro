@@ -8,12 +8,8 @@ import { Image } from "astro:assets";
 
 // Header
 import headerImage from '../images/cranimals/Cranimals-header@2x.webp';
+import headerImageMobile from '../images/cranimals/Cranimals-header-mobile@2x.png';
 
-// const {
-//   title = "headerImage",
-//   description = "Cranimals Zen Dogfood",
-//   image="../images/cranimals/Cranimals-header@2x.webp"
-// } = Astro.props;d
 
 // Section 01
 import section0101 from '../images/cranimals/cranimals-sketch-01.webp';
@@ -46,6 +42,13 @@ import '../styles/queries-port.css';
             quality="high"
             alt="Cranimals Zen Dogfood"
             src={headerImage}
+          />
+          <Image
+            class="opener-splash-mobile"
+            loading="eager"
+            quality="high"
+            alt="Cranimals Zen Dogfood"
+            src={headerImageMobile}
           />
         </div>
         <div class="opener-primary-textblock">
@@ -80,17 +83,26 @@ import '../styles/queries-port.css';
       <!-- Chapter 1 -->
 
     <section class="chapter section-margin">
-      
-        <h2 class="port-chapter-title">Chapter 1: <span>Initial Sketches</span></h2>
-      
-      <div class="bento-container ">
-        <div class="bento-item item1"><Image src={section0102} alt=""></div>
-        <div class="bento-item item2"><Image src={section0103} alt=""></Image></div>
-        <div class="bento-item item3"><Image src={section0101} alt=""></Image></div>
-        <div class="bento-item item4"><Image src={section0104} alt=""></Image></div>   </div>
-        <div class="chapter-text-container">
-          <h2 class="chapter-title">Chapter 1: Initial Sketches</h2>
-        </div>   
+
+      <!-- Photos -->
+    <div class="bento-container mid-section-margin">
+        <div class="bento-item item1"><Image loading="eager"
+            quality="medium"
+            src={section0102} alt=""></div>
+        <div class="bento-item item2"><Image loading="eager"
+            quality="medium"
+            src={section0103} alt=""></Image></div>
+        <div class="bento-item item3"><Image loading="eager"
+            quality="medium"
+            src={section0101} alt=""></Image></div>
+        <div class="bento-item item4"><Image loading="eager"
+            quality="medium"
+            src={section0104} alt=""></Image></div>   </div>
+        
+<!-- Text -->
+<div class="chapter-text-block"><div class="chapter-title-container">
+          <h2 class="chapter-title" data-chapter="Chapter 1">Initial Sketches</h2>
+        </div><div class="chapter-text-container"><p class="port-body-text">We agreed on the concept of something that mixed cute doggy character packaging we often see in the aisles with something a little serene and worthy of the ZenDog title</p></div></div>
         
     </section>
  

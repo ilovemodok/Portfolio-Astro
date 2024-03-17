@@ -2,6 +2,79 @@
   display: none;
 } */
 
+/* Port Text Stylings */
+
+.port-title {
+  font-size: 6.4rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--gw-800);
+  text-align: center;
+  margin: 10rem 0 5rem 0;
+}
+
+.port-title span {
+  color: var(--gw-600);
+}
+
+.port-sub-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--gw-600);
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-left: 0.2rem;
+}
+
+.port-sidebar-list {
+  /* margin: 1.8rem 0 0 1.8rem; */
+  list-style: disc inside none;
+  color: var(--gw-000);
+  font-size: 1.4rem;
+}
+
+.chapter-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--gw-900);
+  text-align: left;
+  line-height: 1.2;
+}
+
+.chapter-title:before {
+  content: attr(data-chapter);
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gw-000);
+  font-family: poppins;
+  background-color: var(--gw-500);
+  top: -0.8rem;
+  left: -1rem;
+  transform: translateY(-50%);
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.3rem;
+}
+
+.--title-on-dark {
+  color: var(--gw-500);
+}
+
+.port-body-text {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--gw-900);
+  margin-bottom: 1.2rem;
+}
+
+.port-sidebar-title {
+  color: var(--gw-500);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.2rem 0 1.2rem 0;
+}
+
 /* General */
 
 .port-main-bg {
@@ -22,18 +95,22 @@
 
 /* Nav */
 
-.header-background {
+/* .header-background {
   height: 11rem;
   top: 0;
 
   box-shadow: 0 0.2rem 0.5rem #12283a15;
   padding-bottom: 0.5rem;
-}
+} */
 
 /* Spacing */
 
 .section-margin {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
+}
+
+.mid-section-margin {
+  margin-bottom: 5rem;
 }
 
 /* Opener */
@@ -46,6 +123,13 @@
   width: 100%;
   height: auto;
   border-radius: 1.2rem;
+}
+
+.opener-splash-mobile {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  display: none;
 }
 
 .opener-title {
@@ -71,7 +155,7 @@
 
 /* CASE STUDY BODY */
 
-.process-steps {
+/* .process-steps {
   background-color: var(--gw-000);
   font-size: 1.6rem;
   display: flex;
@@ -87,7 +171,7 @@
   & p {
     color: var(--gw-000);
   }
-}
+} */
 
 /* Bento Grid */
 
@@ -134,67 +218,18 @@
   grid-area: 2 / 4 / 3 / 5;
 }
 
-/* Port Text Stylings */
-
-.port-title {
-  font-size: 6.4rem;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--gw-800);
-  text-align: center;
-  margin: 10rem 0 5rem 0;
+.chapter-text-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.port-title span {
-  color: var(--gw-600);
+.chapter-title-container {
+  position: relative;
+  margin-left: 0.8rem;
 }
-
-.port-sub-title {
-  font-size: 3.2rem;
-  font-weight: 500;
-  color: var(--gw-600);
-  text-align: left;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  margin-left: 0.2rem;
-}
-
-.port-chapter-title {
-  font-size: 4.8rem;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--gw-800);
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.port-chapter-title span {
-  color: var(--gw-600);
-}
-
-.--title-on-dark {
-  color: var(--gw-500);
-}
-
-.port-body-text {
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: var(--gw-900);
-  margin-bottom: 1.2rem;
-}
-
-.port-sidebar-title {
-  color: var(--gw-500);
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 1.2rem 0 1.2rem 0;
-}
-
-.port-sidebar-list {
-  /* margin: 1.8rem 0 0 1.8rem; */
-  list-style: disc inside none;
-  color: var(--gw-000);
-  font-size: 1.4rem;
+.chapter-text-container {
+  border-left: 0.4rem solid var(--gw-500);
+  padding-left: 2rem;
 }
 
 /* Extra Modifiers */

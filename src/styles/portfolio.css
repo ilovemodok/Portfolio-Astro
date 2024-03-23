@@ -1,65 +1,8 @@
-/* .hidden {
-  display: none;
-} */
+/*********** 
 
-/* Port Text Stylings */
+GENERAL 
 
-.port-title {
-  font-size: 6.4rem;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--gw-800);
-  text-align: center;
-  margin: 10rem 0 5rem 0;
-}
-
-.port-title span {
-  color: var(--gw-600);
-}
-
-.port-sub-title {
-  font-size: 3.2rem;
-  font-weight: 500;
-  color: var(--gw-600);
-  text-align: left;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  margin-left: 0.2rem;
-}
-
-.port-sidebar-list {
-  /* margin: 1.8rem 0 0 1.8rem; */
-  list-style: disc inside none;
-  color: var(--gw-000);
-  font-size: 1.4rem;
-}
-
-.chapter-title {
-  font-size: 3.8rem;
-  font-weight: 900;
-  color: var(--gw-900);
-  text-align: left;
-  line-height: 1.2;
-}
-
-.chapter-title:before {
-  content: attr(data-chapter);
-  position: absolute;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--gw-000);
-  font-family: poppins;
-  background-color: var(--gw-500);
-  top: -0.8rem;
-  left: -1rem;
-  transform: translateY(-50%);
-  padding: 0.2rem 0.7rem;
-  border-radius: 0.3rem;
-}
-
-.--title-on-dark {
-  color: var(--gw-500);
-}
+***********/
 
 .port-body-text {
   font-weight: 400;
@@ -68,23 +11,16 @@
   margin-bottom: 1.2rem;
 }
 
-.port-sidebar-title {
-  color: var(--gw-500);
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 1.2rem 0 1.2rem 0;
-}
-
-/* General */
-
-.port-main-bg {
-  background-color: var(--gw-000);
-}
-
-.portfolio-wrapper {
-  margin: 0 auto 0 auto;
-  padding: 0 3.2rem 0 3.2rem;
-  max-width: 102.4rem;
+.portfolio-wrapper section:nth-child(even) {
+  /* margin: 0 auto 0 auto;
+  padding: 0 3.2rem 0 3.2rem; */
+  /* max-width: 102.4rem; */
+  background-image: conic-gradient(
+    from 110deg at -70% 200%,
+    #bcc1cd 0deg,
+    #bcc1cd 90deg,
+    #fff 1turn
+  );
 }
 
 .port-grid {
@@ -93,27 +29,52 @@
   row-gap: 1.2rem;
 }
 
-/* Nav */
+.chapter-wrapper {
+  max-width: 102.4rem;
+  margin: 0 auto;
+  padding: 12rem 3.2rem 8rem 3.2rem;
+}
 
-/* .header-background {
-  height: 11rem;
-  top: 0;
-
-  box-shadow: 0 0.2rem 0.5rem #12283a15;
-  padding-bottom: 0.5rem;
-} */
-
-/* Spacing */
-
-.section-margin {
+.--section-margin {
   margin-bottom: 10rem;
 }
 
-.mid-section-margin {
+.--mid-section-margin {
   margin-bottom: 5rem;
 }
 
-/* Opener */
+/*********** 
+
+OPENER 
+
+
+
+***********/
+
+.port-title {
+  font-size: 6.4rem;
+  font-weight: 800;
+
+  color: var(--gw-900);
+  text-align: center;
+  margin: 0 0 5rem 0;
+  filter: drop-shadow(0 0 0 var(--gw-000));
+}
+
+.port-title span {
+  color: var(--gw-600);
+  line-height: 1.3;
+}
+
+.port-sub-title {
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: var(--gw-600);
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-left: 0.2rem;
+}
 
 .opener-grid {
   grid: auto auto auto / 3fr 1fr;
@@ -140,38 +101,39 @@
   margin-top: 2.4rem;
 }
 
+/* The My Role/ My Tools Sidebar */
+
 .opener-secondary-textblock {
-  background: radial-gradient(
-    75% 130% at 80% 75%,
-    rgb(23, 63, 95) 15%,
-    #12283a 100%
-  );
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gw-900);
+  border: var(--gw-400) 0.2rem solid;
   padding: 2rem 2rem 4.5rem 3.2rem;
   /* border: 0.2rem solid #4293d7; */
   margin: 2rem 0 4rem 0;
   border-radius: 1.6rem;
-  box-shadow: 0 0.3rem 0.5rem #12283a10;
+  /* box-shadow: 0 0.3rem 0.5rem #12283a05; */
 }
 
-/* CASE STUDY BODY */
+.port-sidebar-title {
+  color: var(--gw-500);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2.4rem -0.2rem 1.2rem 0;
+}
 
-/* .process-steps {
-  background-color: var(--gw-000);
+.port-sidebar-list {
+  list-style: none;
+  color: var(--gw-200);
   font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 600;
 }
 
-.process-steps:nth-child(odd) {
-  background-color: var(--gw-900);
-  & h2 {
-    color: var(--gw-000);
-  }
-  & p {
-    color: var(--gw-000);
-  }
-} */
+/*********** 
+
+CHAPTERS 
+
+***********/
 
 /* Bento Grid */
 
@@ -181,30 +143,6 @@
   gap: 1.2rem;
 }
 
-.bento-item {
-  text-align: center;
-  border-radius: 1.2rem;
-  border: 0.2rem solid #dbdddf49;
-  overflow: clip;
-  /* box-shadow: var(--gw-shadow) 0px 10px 50px; */
-  position: relative;
-}
-
-.bento-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.bento-item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, #fcfdfd, #12283a);
-  opacity: 0.2;
-}
 .item1 {
   grid-area: 1 / 1 / 3 / 3;
 }
@@ -217,6 +155,49 @@
 .item4 {
   grid-area: 2 / 4 / 3 / 5;
 }
+
+.bento-item {
+  border-radius: 1.2rem;
+  /* border: 0.2rem solid var(--gw-800); */
+  overflow: clip;
+  box-shadow: var(--gw-shadow) 0px 10px 50px;
+  position: relative;
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-bento {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1.2rem;
+  /* border: 0.2rem solid var(--gw-800); */
+  overflow: clip;
+  box-shadow: var(--gw-shadow) 0px 10px 50px;
+}
+
+/* .bento-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #fcfdfd, #12283a);
+  opacity: 0.2;
+} */
+
+.double-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+}
+
+/* Chapter Text Block */
 
 .chapter-text-block {
   display: grid;
@@ -232,16 +213,26 @@
   padding-left: 2rem;
 }
 
-/* Extra Modifiers */
+.chapter-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--gw-900);
+  text-align: left;
+  line-height: 1.2;
+}
 
-.port-text-on-dark {
+.chapter-title:before {
+  content: attr(data-chapter);
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 500;
   color: var(--gw-000);
-}
-
-.--section-break {
-  margin-bottom: 3.2rem;
-}
-
-.--top-bottom-padding {
-  padding: 12rem 0;
+  font-family: poppins;
+  background-color: var(--gw-600);
+  top: -2.2rem;
+  left: -0.4rem;
+  transform: translateY(-50%);
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.3rem;
+  transform: rotate(-2deg);
 }

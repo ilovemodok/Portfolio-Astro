@@ -86,9 +86,11 @@ Instead, 1rem = 1em = 16px*/
   }
   .item2 {
     grid-area: 2 / 1 / 2 / 3;
+    height: 30rem;
   }
   .item3 {
     grid-area: 2 / 3 / 3 / 5;
+    height: 30rem;
   }
   .item4 {
     display: none;
@@ -151,5 +153,15 @@ Instead, 1rem = 1em = 16px*/
     gap: 7%;
     padding: 3.2rem 0;
     margin: 2rem 0 4rem;
+  }
+
+  .no-mobile {
+    display: none;
+  }
+
+  .double-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }

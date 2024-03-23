@@ -17,5 +17,9 @@
     "lottie-web": "^5.12.2",
     "smoothscroll-polyfill": "^0.4.4",
     "svelte": "^4.2.12"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

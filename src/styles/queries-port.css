@@ -10,7 +10,15 @@ Instead, 1rem = 1em = 16px*/
   html {
     font-size: 56.25%;
   }
+
+  .port-body-text {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--gw-900);
+    margin-bottom: 2rem;
+  }
 }
+
 /*******************************/
 /* Below 1000px (Tablets) */
 /*******************************/
@@ -32,7 +40,7 @@ Instead, 1rem = 1em = 16px*/
 
   .port-title {
     font-size: 6rem;
-    margin: 13rem 0 2.4rem 0;
+    margin: 8rem 0 2.4rem 0;
     line-height: 90%;
   }
 
@@ -41,6 +49,64 @@ Instead, 1rem = 1em = 16px*/
   }
   .opener-title {
     grid-column: 1 / span 1;
+  }
+
+  .opener-secondary-textblock {
+    background-color: var(--gw-800);
+    justify-content: center;
+    flex-direction: row;
+    gap: 10%;
+    padding: 3.2rem 10%;
+    margin: 2rem 10% 4rem;
+  }
+
+  .port-sidebar-title {
+    color: var(--gw-500);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0 -0.2rem 1.2rem 0;
+  }
+
+  .port-sidebar-list {
+    list-style: disc inside none;
+    color: var(--gw-000);
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .bento-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .item1 {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+  .item2 {
+    grid-area: 2 / 1 / 2 / 3;
+  }
+  .item3 {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  .item4 {
+    display: none;
+  }
+
+  .chapter-text-block {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .chapter-title-container {
+    position: relative;
+    margin-left: 0.5rem;
+    margin-bottom: 2.4rem;
+  }
+  .chapter-text-container {
+    border-left: none;
+    padding-left: 0;
   }
 }
 
@@ -52,20 +118,19 @@ Instead, 1rem = 1em = 16px*/
   /* text stylings */
 
   .port-title {
-    font-size: 5rem;
-    margin: 13rem 0 2.4rem 0;
+    font-size: 7rem;
+    margin: 8rem 0 2.4rem 0;
     line-height: 90%;
   }
 
   .port-title span {
+    font-size: 4.5rem;
     color: var(--gw-600);
-
     line-height: 102%;
   }
 
   .portfolio-wrapper {
     margin: 0 auto 0 auto;
-    padding: 0 2.4rem;
   }
 
   /* Opener */
@@ -83,15 +148,8 @@ Instead, 1rem = 1em = 16px*/
   }
 
   .opener-secondary-textblock {
-    background: radial-gradient(
-      75% 130% at 80% 75%,
-      rgb(23, 63, 95) 15%,
-      #12283a 100%
-    );
-    padding: 2rem 2rem 4.5rem 3.2rem;
-    /* border: 0.2rem solid #4293d7; */
-    margin: 2rem 5rem 4rem 5rem;
-    border-radius: 1.6rem;
-    box-shadow: 0 0.3rem 0.5rem #12283a10;
+    gap: 7%;
+    padding: 3.2rem 0;
+    margin: 2rem 0 4rem;
   }
 }

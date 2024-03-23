@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+const { bento4GoldenRatio } = Astro.props;
+---
+
+<div class="bento-container --mid-section-margin">
+  <div class="bento-item item1">
+    <Image
+      loading="eager"
+      quality="medium"
+      src={bento4GoldenRatio.item1}
+      alt={bento4GoldenRatio.alt1}
+    />
+    <div class="bento-item item2">
+      <Image
+        loading="eager"
+        quality="medium"
+        src={bento4GoldenRatio.item2}
+        alt={bento4GoldenRatio.alt2}
+      />
+    </div>
+    <div class="bento-item item3">
+      <Image
+        loading="eager"
+        quality="medium"
+        src={bento4GoldenRatio.item3}
+        alt={bento4GoldenRatio.alt3}
+      />
+    </div>
+    <div class="bento-item item4">
+      <Image
+        loading="eager"
+        quality="medium"
+        src={bento4GoldenRatio.item4}
+        alt={bento4GoldenRatio.alt4}
+      />
+    </div>
+  </div>
+</div>

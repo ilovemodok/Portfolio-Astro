@@ -1,0 +1,12 @@
+---
+const { chapterText } = Astro.props;
+---
+
+<div class="chapter-text-block"><div class="chapter-title-container">
+  <h2 class="chapter-title" data-chapter={chapterText.number}>{chapterText.title}</h2>
+</div><div class="chapter-text-container">
+  {chapterText.body.map(paragraph => (
+    <p class="port-body-text">{paragraph}</p>
+  ))}
+  
+</div></div>

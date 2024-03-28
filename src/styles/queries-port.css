@@ -13,7 +13,7 @@ Instead, 1rem = 1em = 16px*/
 
   .port-body-text {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--gw-900);
     margin-bottom: 2rem;
   }

@@ -15,12 +15,12 @@ GENERAL
   /* margin: 0 auto 0 auto;
   padding: 0 3.2rem 0 3.2rem; */
   /* max-width: 102.4rem; */
-  background-image: conic-gradient(
+  /* background-image: conic-gradient(
     from 110deg at -70% 200%,
     #bcc1cd 0deg,
     #bcc1cd 90deg,
     #fff 1turn
-  );
+  ); */
 }
 
 .port-grid {
@@ -32,7 +32,7 @@ GENERAL
 .chapter-wrapper {
   max-width: 102.4rem;
   margin: 0 auto;
-  padding: 12rem 3.2rem 8rem 3.2rem;
+  padding: 8rem 3.2rem 8rem 3.2rem;
 }
 
 .--section-margin {
@@ -52,9 +52,9 @@ OPENER
 ***********/
 
 .port-title {
-  font-size: 6.4rem;
+  font-size: 8.4rem;
   font-weight: 800;
-
+  line-height: 65%;
   color: var(--gw-900);
   text-align: center;
   margin: 0 0 5rem 0;
@@ -64,6 +64,7 @@ OPENER
 .port-title span {
   color: var(--gw-600);
   line-height: 1.3;
+  font-size: 4.4rem;
 }
 
 .port-sub-title {
@@ -77,13 +78,19 @@ OPENER
 }
 
 .opener-grid {
-  grid: auto auto auto / 3fr 1fr;
+  grid: auto auto / 3fr 1fr;
 }
 
+.opener-wrapper {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  height: auto;
+}
 .opener-splash {
+  display: block;
   width: 100%;
   height: auto;
-  border-radius: 1.2rem;
+  object-fit: cover;
 }
 
 .opener-splash-mobile {
@@ -108,9 +115,8 @@ OPENER
   flex-direction: column;
   background-color: var(--gw-900);
   border: var(--gw-400) 0.2rem solid;
-  padding: 2rem 2rem 4.5rem 3.2rem;
+  padding: 1rem 3.2rem 4.5rem 3.2rem;
   /* border: 0.2rem solid #4293d7; */
-  margin: 2rem 0 4rem 0;
   border-radius: 1.6rem;
   /* box-shadow: 0 0.3rem 0.5rem #12283a05; */
 }
@@ -140,7 +146,7 @@ CHAPTERS
 .bento-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  gap: 1.4rem;
 }
 
 .item1 {
@@ -159,9 +165,9 @@ CHAPTERS
 
 .bento-item {
   border-radius: 1.2rem;
-  /* border: 0.2rem solid var(--gw-800); */
+  /* border: 0.3rem solid var(--gw-400); */
   overflow: clip;
-  box-shadow: var(--gw-shadow) 0px 10px 50px;
+  /* box-shadow: var(--gw-shadow) 0px 10px 50px; */
   position: relative;
 }
 
@@ -176,9 +182,9 @@ CHAPTERS
   height: 100%;
   object-fit: contain;
   border-radius: 1.2rem;
-  /* border: 0.2rem solid var(--gw-800); */
+  /* border: 0.3rem solid var(--gw-400); */
   overflow: clip;
-  box-shadow: var(--gw-shadow) 0px 10px 50px;
+  /* box-shadow: var(--gw-shadow) 0px 10px 50px; */
 }
 
 /* .bento-item::after {

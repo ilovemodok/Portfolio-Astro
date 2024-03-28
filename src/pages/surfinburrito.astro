@@ -1,0 +1,230 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import CaseStudyOpener from "../components/CaseStudyOpener.astro";
+
+import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio.astro";
+
+import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
+
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
+import { Image } from "astro:assets";
+
+// <head>
+const pageTitle = "Cranimals";
+
+// OPENER
+
+const portOpener = {
+  title: "The Surfin' Burrito",
+
+  sub: "Donkeys & Diners",
+
+  clientText:
+    "The Surfin' Burrito is a world-famous burrito stand in the heart of sunny Cancun, Mexico.",
+
+  challengeText:
+    "To come up with a new take on their lovable surfing donkey mascot ahead of Guy Fieri's 'Diners, Drive-ins, & Dives' coming in to do a TV segment.",
+
+  roles: ["Character Design", "Logo Design", "Merchandise"],
+
+  tools: ["Hand Drawing", "Adobe Photoshop", "Adobe Illustrator"],
+
+  headerImage: headerImage,
+
+  headerImageMobile: headerImageMobile,
+};
+
+// CHAPTER 01
+
+// Bento
+const chapter01Bento = {
+  item1: section0101,
+  item2: section0102,
+  item3: section0103,
+  item4: section0104,
+  alt1: "The Surfin' Burrito Sketch 01",
+  alt2: "The Surfin' Burrito Sketch 02",
+  alt3: "The Surfin' Burrito Sketch 03",
+  alt4: "The Surfin' Burrito Sketch 04",
+};
+
+// Text
+const chapter01Text = {
+  title: "Initial Sketches",
+  number: "Chapter 1",
+  body: [
+    "We agreed on the concept of something that mixed cute doggy character packaging we often see in the aisles with something a little serene and worthy of the ZenDog title.",
+  ],
+};
+
+// CHAPTER 02
+
+// Bento
+
+// Text
+const chapter02Text = {
+  title: "Tightening Pencils",
+  number: "Chapter 2",
+  body: [
+    "I came up with a few tighter pencils. They liked these a lot, but for the central image wanted sometihng easier to read from far away. So I went back to the drawing board!",
+  ],
+};
+
+// CHAPTER 03
+
+// Bento
+
+// Text
+const chapter03Text = {
+  title: "Another pass at the art",
+  number: "Chapter 3",
+  body: [
+    "I decided to whip out the 'ol Wacom tablet and do a digital version of the art. This was a lot easier to read from far away, and they loved it. With that, I went right to the next step.",
+  ],
+};
+
+// CHAPTER 04
+
+// Bento
+const chapter04Bento = {
+  item1: section0101,
+  item2: section0102,
+  alt1: "Cranimals Sketch 01",
+  alt2: "Cranimals Sketch 02",
+  alt3: "Cranimals Sketch 03",
+};
+
+// Text
+const chapter04Text = {
+  title: "Pack it in a Doggy Bag",
+  number: "Final Chapter",
+  body: [
+    "Upon final approval, the packaging was set up and printed. The results were great, with Cranimals winning a Pet Product New Editor’s Choice Award, even cheekily adding that the ‘animated’ cover model Charlie was a big part of their success.",
+    "This was a fun team to work with. It also allowed me to use my illustration along with my graphic design skills to come up with a fun concept that had great results. A win for everyone, especially vegan dogs!",
+  ],
+};
+
+// IMAGES
+
+// Opener
+import headerImage from "../images/surfinburrito/burrito-header@2x.png";
+import headerImageMobile from "../images/surfinburrito/burrito-header-mobile@2x.png";
+
+// Chapter 01
+import section0101 from "../images/surfinburrito/burrito-sketch-01.png";
+import section0102 from "../images/surfinburrito/burrito-sketch-02.png";
+import section0103 from "../images/surfinburrito/burrito-sketch-03.png";
+import section0104 from "../images/surfinburrito/burrito-sketch-04.png";
+
+// Chapter 02
+import section0201 from "../images/surfinburrito/burrito-final-sketch.png";
+
+// Chapter 03
+import section0301 from "../images/surfinburrito/burrito-final-sketch-digital.png";
+
+// Chapter 04
+import section0401 from "../images/cranimals/craminals-packaging-02.webp";
+import section0402 from "../images/cranimals/cranimals-display.webp";
+
+// CSS Styles
+import "../styles/portfolio.css";
+import "../styles/queries-port.css";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <!-- START OF CONTENT -->
+
+  <!-----------
+         OPENER 
+        -------------->
+
+  <main class="portfolio-wrapper">
+    <CaseStudyOpener portOpener={portOpener} />
+
+    <!-----------
+         CHAPTER 1 
+        -------------->
+    <section>
+      <div class="chapter-wrapper">
+        <!-- Photos -->
+
+        <CaseStudyBento4GoldenRatio bento4GoldenRatio={chapter01Bento} />
+
+        <!-- Text -->
+
+        <CaseStudyChapterText chapterText={chapter01Text} />
+      </div>
+    </section>
+
+    <!-----------
+         CHAPTER 2 
+        -------------->
+
+    <section>
+      <div class="chapter-wrapper">
+        <!-- Photos -->
+
+        <Image
+          src={section0201}
+          class="single-bento --mid-section-margin fade-in"
+          loading="lazy"
+          quality="medium"
+          alt="Cranimal Final Pencil Sketch"
+        />
+
+        <!-- Text -->
+
+        <CaseStudyChapterText chapterText={chapter02Text} />
+      </div>
+    </section>
+
+    <!-----------
+         CHAPTER 3 
+        -------------->
+
+    <section>
+      <div class="chapter-wrapper">
+        <!-- Photos -->
+
+        <Image
+          src={section0301}
+          class="single-bento --mid-section-margin"
+          loading="lazy"
+          quality="medium"
+          alt="Cranimal Final Artwork"
+        />
+
+        <!-- Text -->
+
+        <CaseStudyChapterText chapterText={chapter03Text} />
+      </div>
+    </section>
+
+    <!-----------
+         CHAPTER 4 
+        -------------->
+
+    <section>
+      <div class="chapter-wrapper">
+        <!-- Photos -->
+        <div class="double-container --mid-section-margin">
+          <div class="bento-item">
+            <Image loading="eager" quality="medium" src={section0401} alt="" />
+          </div>
+
+          <div class="bento-item no-mobile">
+            <Image loading="eager" quality="medium" src={section0402} alt="" />
+          </div>
+        </div>
+        <!-- Text -->
+
+        <CaseStudyChapterText chapterText={chapter04Text} />
+      </div>
+    </section>
+    <div>
+      <!-- <PortfolioThumbnails /> -->
+    </div>
+  </main>
+</MainLayout>

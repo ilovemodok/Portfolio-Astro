@@ -1,0 +1,149 @@
+---
+import { Image } from "astro:assets";
+const { portThumbnails } = Astro.props;
+
+// Portfolio Thumbnails
+import portThumbnail01 from "../images/homepage/portfolio-thumbnails/port-thumbnail-cranimals@2x.png";
+import portThumbnail02 from "../images/homepage/portfolio-thumbnails/port-thumbnail-surfin-burrito@2x.png";
+import portThumbnail03 from "../images/homepage/portfolio-thumbnails/port-thumbnail-phbooks@2x.png";
+import portThumbnail04 from "../images/homepage/portfolio-thumbnails/port-thumbnail-rakuten@2x.png";
+import portThumbnail05 from "../images/homepage/portfolio-thumbnails/port-thumbnail-bumblebee@2x.png";
+import portThumbnail06 from "../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png";
+---
+
+<div class="portfolio-grid">
+
+  <!-- Portfolio / Cranimals -->
+<a class="portfolio-link" href="/cranimals/"
+    ><div class="portfolio-card">
+        <Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="Cranimals Zen Dogfood"
+          src={portThumbnail01}
+          loading="lazy"
+        />
+
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">Cranimals</p>
+        <p class="port-type-subtitle">mascot | logo | packaging</p>
+        <p class="port-body">
+          "Zen Dog" branding created to promote healthy dog food.
+        </p>
+      </div>
+    </div></a
+  >
+
+  <!-- Portfolio / The Surfin' Burrito -->
+  <a class="portfolio-link" href="http://garywintle.com/surfinburrito"
+    ><div class="portfolio-card">
+<Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="The Surfin' Burrito Donkey"
+          src={portThumbnail02}
+          loading="lazy"
+        />
+      </picture>
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">The Surfin' Burrito</p>
+        <p class="port-type-subtitle">mascot | logo | t-shirts</p>
+        <p class="port-body">
+          Mascot redesign for Cancun's world-famous burrito stand.
+        </p>
+      </div>
+    </div></a
+  >
+
+  <!-- Portfolio / Pothead Books -->
+  <a
+    class="portfolio-link"
+    href="/img/portfolioart/potheadbooks.webp"
+    data-lightbox="image-1"
+    ><div class="portfolio-card">
+        <Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="Pothead Books Game Character Illustration"
+          src={portThumbnail03}
+          loading="lazy"
+        />
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">Pothead Books</p>
+        <p class="port-type-subtitle">Books | Boardgames</p>
+        <p class="port-body">
+          Book and game making from character creation to print.
+        </p>
+      </div>
+    </div></a
+  >
+
+  <!-- Portfolio / Rakuten -->
+  <a class="portfolio-link" href="http://garywintle.com/rakuten"
+    ><div class="portfolio-card">
+        <Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="Rakuten Illustration with a Godzilla-looking kaiju high-fiving a King Kong-looking kaiju"
+          src={portThumbnail04}
+          loading="lazy"
+        />
+    
+
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">Rakuten</p>
+        <p class="port-type-subtitle">Illustration | Promo Merch</p>
+        <p class="port-body">
+          New York x Tokyo event art and promo merch.
+        </p>
+      </div>
+    </div></a
+  >
+
+  <!-- Portfolio / Bumblebee English -->
+
+  <a class="portfolio-link" href="http://garywintle.com/bumblebee">
+    <div class="portfolio-card">
+        <Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="Cute little bumblebee with Bumblebee English logo"
+          src={portThumbnail05}
+          loading="lazy"
+        />
+      </picture>
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">Bumblebee English</p>
+        <p class="port-type-subtitle">Mascot | Logo | Branding</p>
+        <p class="port-body">Branding for Osaka-based school.</p>
+      </div>
+    </div></a
+  >
+
+  <!-- Portfolio / Dank Arson -->
+  <a class="portfolio-link" href="/messagesent.html"
+    ><div class="portfolio-card">
+        <Image
+          width="338"
+          height="338"
+          class="port-thumbnail-img"
+          alt="Dank Arson Logo"
+          src={portThumbnail06}
+          loading="lazy"
+        />
+      </picture>
+      <div class="port-thumbnail-textbox">
+        <p class="port-type-title">Dank Arson</p>
+        <p class="port-type-subtitle">Branding | motion graphics</p>
+        <p class="port-body">
+          Motion graphics and branding for Youtube channel.
+        </p>
+      </div>
+    </div></a
+  >
+</div>

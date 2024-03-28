@@ -7,6 +7,8 @@ import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio
 
 import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
 
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
 import { Image } from "astro:assets";
 
 // <head>
@@ -98,7 +100,7 @@ const chapter04Bento = {
 // Text
 const chapter04Text = {
   title: "Pack it in a Doggy Bag",
-  number: "Chapter 4",
+  number: "Final Chapter",
   body: [
     "Upon final approval, the packaging was set up and printed. The results were great, with Cranimals winning a Pet Product New Editor’s Choice Award, even cheekily adding that the ‘animated’ cover model Charlie was a big part of their success.",
     "This was a fun team to work with. It also allowed me to use my illustration along with my graphic design skills to come up with a fun concept that had great results. A win for everyone, especially vegan dogs!",
@@ -167,11 +169,12 @@ import "../styles/queries-port.css";
 
         <Image
           src={section0201}
-          class="single-bento --mid-section-margin"
+          class="single-bento --mid-section-margin fade-in"
           loading="eager"
           quality="medium"
           alt="Cranimal Final Pencil Sketch"
         />
+     
 
         <!-- Text -->
 
@@ -189,7 +192,7 @@ import "../styles/queries-port.css";
 
         <Image
           src={section0301}
-          class="single-bento --mid-section-margin"
+          class="single-bento --mid-section-margin fade-in"
           loading="eager"
           quality="medium"
           alt="Cranimal Final Artwork"
@@ -208,7 +211,7 @@ import "../styles/queries-port.css";
     <section>
       <div class="chapter-wrapper">
         <!-- Photos -->
-        <div class="double-container --mid-section-margin">
+        <div class="double-container --mid-section-margin fade-in">
           <div class="bento-item">
             <Image loading="eager" quality="medium" src={section0401} alt="" />
           </div>
@@ -222,5 +225,8 @@ import "../styles/queries-port.css";
         <CaseStudyChapterText chapterText={chapter04Text} />
       </div>
     </section>
+    <div>
+      <!-- <PortfolioThumbnails /> -->
+    </div>
   </main>
 </MainLayout>

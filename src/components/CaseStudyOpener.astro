@@ -7,9 +7,9 @@ const { portOpener } = Astro.props;
   <div class="port-grid opener-grid chapter-wrapper">
     <div class="opener-title">
       <h1 class="port-title">
-        {portOpener.title}: <span>{portOpener.sub}</span>
+        {portOpener.title}<br> <span>{portOpener.sub}</span>
       </h1>
-
+<div class="opener-wrapper">
       <Image
         src={portOpener.headerImage}
         class="opener-splash"
@@ -28,6 +28,7 @@ const { portOpener } = Astro.props;
         width="780"
         height="559"
       />
+    </div>
     </div>
     <div class="opener-primary-textblock">
       <h2 class="port-sub-title">The Client</h2>
@@ -60,3 +61,4 @@ const { portOpener } = Astro.props;
     </div>
   </div>
 </section>
+

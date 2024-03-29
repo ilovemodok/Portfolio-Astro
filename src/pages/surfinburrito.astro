@@ -87,22 +87,21 @@ const chapter03Text = {
 
 // CHAPTER 04
 
-// Bento
-const chapter04Bento = {
-  item1: section0101,
-  item2: section0102,
-  alt1: "Cranimals Sketch 01",
-  alt2: "Cranimals Sketch 02",
-  alt3: "Cranimals Sketch 03",
+const chapter04Text = {
+  title: "Final Art",
+  number: "Chapter 4",
+  body: [
+    "I finished inking and coloringin Adobe Illustrator. I find using Illustrator for business related mascots makes for a really clean look that's easy to read.",
+  ],
 };
 
-// Text
-const chapter04Text = {
-  title: "Pack it in a Doggy Bag",
+// Final Chapter
+
+const chapter05Text = {
+  title: "Showtime!",
   number: "Final Chapter",
   body: [
-    "Upon final approval, the packaging was set up and printed. The results were great, with Cranimals winning a Pet Product New Editor’s Choice Award, even cheekily adding that the ‘animated’ cover model Charlie was a big part of their success.",
-    "This was a fun team to work with. It also allowed me to use my illustration along with my graphic design skills to come up with a fun concept that had great results. A win for everyone, especially vegan dogs!",
+    "With the art done, we rushed to get a t-shirt printed to be ready for Guy Fiera and his popular cooking show Diners, Drive-ins, & Dives! Check it out yourself, it's Season 26, Episode 6.",
   ],
 };
 
@@ -125,8 +124,11 @@ import section0201 from "../images/surfinburrito/burrito-final-sketch.png";
 import section0301 from "../images/surfinburrito/burrito-final-sketch-digital.png";
 
 // Chapter 04
-import section0401 from "../images/cranimals/craminals-packaging-02.webp";
-import section0402 from "../images/cranimals/cranimals-display.webp";
+import section0401 from "../images/surfinburrito/burrito-finalart.png";
+
+// Chapter 05
+import section0501 from "../images/surfinburrito/burrito-guyfieri.png";
+
 
 // CSS Styles
 import "../styles/portfolio.css";
@@ -190,7 +192,7 @@ import "../styles/queries-port.css";
 
         <Image
           src={section0301}
-          class="single-bento --mid-section-margin"
+          class="single-bento --mid-section-margin fade-in"
           loading="lazy"
           quality="medium"
           alt="Cranimal Final Artwork"
@@ -206,23 +208,55 @@ import "../styles/queries-port.css";
          CHAPTER 4 
         -------------->
 
-    <section>
-      <div class="chapter-wrapper">
-        <!-- Photos -->
-        <div class="double-container --mid-section-margin">
-          <div class="bento-item">
-            <Image loading="eager" quality="medium" src={section0401} alt="" />
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <Image
+              src={section0401}
+              class="single-bento --mid-section-margin fade-in"
+              loading="lazy"
+              quality="medium"
+              alt="Cranimal Final Artwork"
+            />
+    
+            <!-- Text -->
+    
+            <CaseStudyChapterText chapterText={chapter04Text} />
           </div>
+        </section>
 
-          <div class="bento-item no-mobile">
-            <Image loading="eager" quality="medium" src={section0402} alt="" />
+        
+    <!-----------
+         CHAPTER 5 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <Image
+              src={section0501}
+              class="single-bento --mid-section-margin fade-in"
+              loading="lazy"
+              quality="medium"
+              alt="Cranimal Final Artwork"
+            />
+    
+            <!-- Text -->
+
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Final Chapter">Showtime!</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">With the art done, we rushed to get a t-shirt printed to be ready for Guy Fiera and his popular cooking show <b>Diners, Drive-ins, & Dives!</b> Check it out yourself, it's Season 26, Episode 6.</p>
+              
+              
+            </div></div>
+    
+            <!-- <CaseStudyChapterText chapterText={chapter05Text} /> -->
           </div>
-        </div>
-        <!-- Text -->
-
-        <CaseStudyChapterText chapterText={chapter04Text} />
-      </div>
-    </section>
+        </section>
     <div>
       <!-- <PortfolioThumbnails /> -->
     </div>

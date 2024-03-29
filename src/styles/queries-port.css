@@ -27,6 +27,12 @@ Instead, 1rem = 1em = 16px*/
   html {
     font-size: 50%;
   }
+
+  .port-title {
+    font-size: 7rem;
+    margin: 2.4rem 0;
+    line-height: 80%;
+  }
 }
 
 /*******************************/
@@ -38,10 +44,16 @@ Instead, 1rem = 1em = 16px*/
     font-size: 50%;
   }
 
+  .chapter-wrapper {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    padding: 4rem 3.2rem;
+  }
+
   .port-title {
-    font-size: 6rem;
+    font-size: 7rem;
     margin: 8rem 0 2.4rem 0;
-    line-height: 90%;
+    line-height: 80%;
   }
 
   .opener-grid {
@@ -77,7 +89,7 @@ Instead, 1rem = 1em = 16px*/
   .bento-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 1.2rem;
   }
 
@@ -120,13 +132,13 @@ Instead, 1rem = 1em = 16px*/
   /* text stylings */
 
   .port-title {
-    font-size: 7rem;
+    font-size: 5.5rem;
     margin: 8rem 0 2.4rem 0;
-    line-height: 90%;
+    line-height: 80%;
   }
 
   .port-title span {
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     color: var(--gw-600);
     line-height: 102%;
   }

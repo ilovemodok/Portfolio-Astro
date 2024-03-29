@@ -1,0 +1,295 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import CaseStudyOpener from "../components/CaseStudyOpener.astro";
+
+import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio.astro";
+
+import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
+
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
+import { Image } from "astro:assets";
+
+// <head>
+const pageTitle = "Cranimals";
+
+// OPENER
+
+const portOpener = {
+  title: "Pothead Books",
+
+  sub: "Board Game Mania",
+
+  clientText:
+    "Pothead books is a book publisher that specialized in books and games for people who are a fan of cannabis-related culture.",
+
+  challengeText:
+    "Based on a rough diagram, I was challenged to create characters, board and pieces for a fun pot-themed board game.",
+
+  roles: ["Character Design", "Package Design", "Asset Design", "Board Layout"],
+
+  tools: ["Hand Drawing", "Adobe Photoshop", "Adobe Illustrator"],
+
+  headerImage: headerImage,
+
+  headerImageMobile: headerImageMobile,
+};
+
+// CHAPTER 01
+
+
+
+// Text
+const chapter01Text = {
+  title: "Initial Sketches",
+  number: "Chapter 1",
+  body: [
+    "We agreed on the concept of something that mixed cute doggy character packaging we often see in the aisles with something a little serene and worthy of the ZenDog title.",
+  ],
+};
+
+// CHAPTER 02
+
+// Bento
+
+// Text
+const chapter02Text = {
+  title: "Tightening Pencils",
+  number: "Chapter 2",
+  body: [
+    "I came up with a few tighter pencils. They liked these a lot, but for the central image wanted sometihng easier to read from far away. So I went back to the drawing board!",
+  ],
+};
+
+// CHAPTER 03
+
+// Bento
+
+// Bento
+const chapter01Bento = {
+  item1: boardsketch01,
+  item2: boardsketch02,
+  item3: boardsketch03,
+  item4: boardsketch04,
+  alt1: "The Surfin' Burrito Sketch 01",
+  alt2: "The Surfin' Burrito Sketch 02",
+  alt3: "The Surfin' Burrito Sketch 03",
+  alt4: "The Surfin' Burrito Sketch 04",
+};
+
+// Text
+const chapter03Text = {
+  title: "Another pass at the art",
+  number: "Chapter 3",
+  body: [
+    "I decided to whip out the 'ol Wacom tablet and do a digital version of the art. This was a lot easier to read from far away, and they loved it. With that, I went right to the next step.",
+  ],
+};
+
+// CHAPTER 04
+
+const chapter04Text = {
+  title: "Final Art",
+  number: "Chapter 4",
+  body: [
+    "I finished inking and coloringin Adobe Illustrator. I find using Illustrator for business related mascots makes for a really clean look that's easy to read.",
+  ],
+};
+
+// Final Chapter
+
+const chapter05Text = {
+  title: "Showtime!",
+  number: "Final Chapter",
+  body: [
+    "With the art done, we rushed to get a t-shirt printed to be ready for Guy Fiera and his popular cooking show Diners, Drive-ins, & Dives! Check it out yourself, it's Season 26, Episode 6.",
+  ],
+};
+
+// IMAGES
+
+// Opener
+import headerImage from "../images/marijuanabowl/mjbowl-desktop.png";
+import headerImageMobile from "../images/marijuanabowl/mjbowl-mobile.png";
+
+
+// SKETCH SECTION
+
+// Character  01
+import characters01 from "../images/marijuanabowl/mjbowl-sketch-characters.png";
+
+// Character  02
+import characters02 from "../images/marijuanabowl/mjbowl-final-characters.png";
+
+// BOARD SECTION
+
+// Board 01
+import boardsketch01 from "../images/marijuanabowl/mjbowl-template.png";
+import boardsketch02 from "../images/marijuanabowl/mjbowl-leafguy-sketch.png";
+import boardsketch03 from "../images/marijuanabowl/mjbowl-1guys-sketch.png";
+import boardsketch04 from "../images/marijuanabowl/mjbowl-growshop-sketch.png";
+
+// Board 02
+
+import boardfinished01 from "../images/marijuanabowl/mjbowl-final.png";
+import boardfinished02 from "../images/marijuanabowl/mjbowl-leafguy-finished.png";
+import boardfinished03 from "../images/marijuanabowl/mjbowl-1guys-finished.png";
+import boardfinished04 from "../images/marijuanabowl/mjbowl-growshop-finished.png";
+
+
+
+// CSS Styles
+import "../styles/portfolio.css";
+import "../styles/queries-port.css";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <!-- START OF CONTENT -->
+
+  <!-----------
+         OPENER 
+        -------------->
+
+  <main class="portfolio-wrapper">
+    <CaseStudyOpener portOpener={portOpener} />
+
+     <!-----------
+         CHARACTER SKETCH 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <Image
+              src={characters01}
+              class="single-bento --mid-section-margin fade-in"
+              loading="eager"
+              quality="medium"
+              alt="Cranimal Final Pencil Sketch"
+            />
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 1">Designing the Players</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">Coming up with the "players" of the game was a lot of function. I dove head first into creating characters that I thought would live in this wild game world.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+    
+        <!-----------
+             CHARACTER ART 
+            -------------->
+    
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <Image
+              src={characters02}
+              class="single-bento --mid-section-margin fade-in"
+              loading="lazy"
+              quality="medium"
+              alt="Cranimal Final Artwork"
+            />
+    
+            <!-- Text -->
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 2">Making Cuts & Finishing Up</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">I was asked to remove some of the characters and went to work finishing the 6 remaining contenders. I used a painting technique that involved both Adobe Illustrator and Photoshop to make the look of this project.</p>
+              
+              
+            </div></div>
+            <!-- End of Test Block -->
+
+          </div>
+        </section>
+
+    <!-----------
+         BOARD SKETCH 
+        -------------->
+    <section>
+      <div class="chapter-wrapper">
+        <!-- Photos -->
+
+        <CaseStudyBento4GoldenRatio bento4GoldenRatio={chapter01Bento} />
+
+        <!-- Text -->
+
+                    <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 3">Visualizing the Board</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">With a text document explaining the game and a list of how many panels would be on the board, I created a "map" to help me visualize all the contents I'd need to make on the board.</p>
+              <p class= "port-body-text">Once everything was planned out, I went to work on designing the panels and characters within. It was quite the task, but lots of fun!</p>
+              
+              
+            </div></div>
+            <!-- End of Test Block -->
+      </div>
+    </section>
+
+    <!-----------
+  BOARD FINISHED 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+            <div class="bento02-container --mid-section-margin">
+              <div class="bento-item b02-item1">    <Image
+      loading="eager"
+      quality="medium"
+      src={boardfinished01}
+      alt=""
+    /></div>
+              <div class="bento-item b02-item2">    <Image
+      loading="eager"
+      quality="medium"
+      src={boardfinished02}
+      alt=""
+    /></div>
+              <div class="bento-item b02-item3">    <Image
+      loading="eager"
+      quality="medium"
+      src={boardfinished03}
+      alt=""
+    /></div>
+              <div class="bento-item b02-item4">    <Image
+      loading="eager"
+      quality="medium"
+      src={boardfinished04}
+      alt=""
+    /></div>
+            </div>
+  
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+            <h2 class="chapter-title" data-chapter="Final Chapter">A Marathon, Not a Sprint</h2>
+          </div>
+          <div class="chapter-text-container">
+            <p class= "port-body-text">This was a pretty big project to complete as one person, but I learned a lot about making something readable to a player (while still being crazy & cool) and had a tons of character creation opportunities.</p>
+            <p class= "port-body-text">This project also has dozens of game pieces I designed too, maybe I'll show them another time. It's not printed yet, but when it is, I'll share some great pics of it in action</p>
+            
+            
+          </div></div>
+          <!-- End of Test Block -->
+          </div>
+        </section>
+
+   
+      <!-- <PortfolioThumbnails /> -->
+    </div>
+  </main>
+</MainLayout>

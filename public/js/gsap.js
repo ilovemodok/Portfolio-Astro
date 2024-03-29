@@ -42,7 +42,7 @@ gsap.from(".hero-image-box", {
 
 gsap.from(".opener-splash, .opener-splash-mobile", {
   duration: 1,
-  x: 30,
+  y: 60,
   scale: 1.25,
   opacity: 0,
   ease: "power1.out",

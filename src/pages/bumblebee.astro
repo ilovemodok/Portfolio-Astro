@@ -1,0 +1,213 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import CaseStudyOpener from "../components/CaseStudyOpener.astro";
+
+import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio.astro";
+
+import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
+
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
+import { Image } from "astro:assets";
+
+// <head>
+const pageTitle = "Bumblebee English Academy";
+
+// OPENER
+
+const portOpener = {
+  title: "Bumblebee",
+
+  sub: "School Logo & Branding",
+
+  clientText:
+    "Bumblebee English is a new English School located in Osaka.",
+
+  challengeText:
+    "They wanted a logo that was fun and friendly, but also professional. They also wanted a mascot that could be used for merchandise and other promotional materials.",
+
+  roles: ["Character Design", "Graphic Design", "Logo Design"],
+
+  tools: ["Hand Drawing", "Adobe Illustrator"],
+
+  headerImage: headerImage,
+
+  headerImageMobile: headerImageMobile,
+
+  desktopAlt: "Bumblebee English Academy Header",
+
+mobileAlt: "Bumblebee English Academy Header",
+};
+
+// IMAGES
+
+// Opener
+import headerImage from "../images/bumblebee/bumblebee-opener-desktop.png";
+import headerImageMobile from "../images/bumblebee/bumblebee-opener-mobile.png";
+
+
+
+
+// Roughs
+import bumblebeeRough01 from "../images/bumblebee/bumblebee-logo-rough.png";
+import bumblebeeRough02 from "../images/bumblebee/bumblebee-mascot-rough.png";
+
+
+// Progress 1
+import bumblebeeProgress0101 from "../images/bumblebee/bumblebee-progress-01.png";
+
+// Progress 2
+import bumblebeeProgress0201 from "../images/bumblebee/bumblebee-logo-rough-02.png";
+import bumblebeeProgress0202 from "../images/bumblebee/bumblebee-mascot-rough-02.png";
+
+// Final Art
+import bumblebeeFinal01 from "../images/bumblebee/bumblebee-final.png";
+
+
+
+
+
+// CSS Styles
+import "../styles/portfolio.css";
+import "../styles/queries-port.css";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <!-- START OF CONTENT -->
+
+  <!-----------
+         OPENER 
+        -------------->
+
+  <main class="portfolio-wrapper">
+    <CaseStudyOpener portOpener={portOpener} />
+
+     <!-----------
+         ROUGHS 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    <div class="double-container02">
+            <div class= "bento-item --mid-section-margin fade-in --onlight"><Image
+              src={bumblebeeRough01}
+              loading="eager"
+              quality="medium"
+              alt="Bumblebee English School Rough Logos"
+            /></div>
+
+            <div class="bento-item --mid-section-margin fade-in"><Image
+              src={bumblebeeRough02}
+              loading="eager"
+              quality="medium"
+              alt="Bumblebee English School Bee Sketch"
+            /></div></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 1">Initial Research & Development</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">Bumblebee English Academy wanted something simple and fun to appeal to their young students. The main lettering was a success right away, we went back and forth on finding a good font for 'English Academy'.</p>
+              <p class= "port-body-text">I tried a few variations on a cute bumblebee character. This page of sketch cam out on top, so I decided to continue from here.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+        <!--PROGRESS 01 -->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos  -->
+    
+            <div class="single-bento --mid-section-margin fade-in --add-border"><Image
+              src={bumblebeeProgress0101}
+              loading="eager"
+              quality="medium"
+              alt="Bumblebee English School Logo and Mascot Progress"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 2">Trying a Few Looks Out</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">I tried incorporating a stylistic bee to the logo itself. I handed them this art with a few different color variations.</p>
+              <p class= "port-body-text">I then made two versions of the bee character in two different styles based on the previous sketches. The painterly one looked good with animations, but just didn't fit right with the logo.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+        <!-- PROGRESS 02 -->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    <div class="double-container">
+            <div class= "bento-item fade-in --add-border"><Image
+              src={bumblebeeProgress0201}
+              loading="eager"
+              quality="medium"
+              alt="Bumblebee English School Logo Progress"
+            /></div>
+
+            <div class="bento-item --mid-section-margin fade-in"><Image
+              src={bumblebeeProgress0202}
+              loading="eager"
+              quality="high"
+              alt="Bumblebee English School Mascot Progress"
+            /></div></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 3">Expanding Variations & Sprucing up the Art</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">The client liked the letter styling of the logo, but thought the graphic bee above it was too much, so we took it out of the equation. I experimented with a bunch of different colors and styles to find the right look.</p>
+              <p class= "port-body-text">Now that the bee mascot was approved, I adjusted the colors a bit and added some sutble shading to give it a more rounded, kid-friendly appearance.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+        
+      <!-----------
+         FINAL ART 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos  -->
+    
+            <div class="single-bento --mid-section-margin fade-in"><Image
+              src={bumblebeeFinal01}
+              loading="eager"
+              quality="high"
+              alt="Bumblebee English School Final Art"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Final Chapter">Bumbling Along to the Finish Line!</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">With the final logo settled on we decided to actually change the 'English Academy' text. Sometimes that initial work pays off, sometimes it was a learning lesson!</p>
+              <p class= "port-body-text">Finally, we put it all together and adjusted the background color a bit to bring everything nicely together.</p>
+              <p class= "port-body-text">This is only the beginning of this particular project. I'll be developing the website and print material in the future as well.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+
+      
+  </main>
+</MainLayout>

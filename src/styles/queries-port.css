@@ -47,7 +47,7 @@ Instead, 1rem = 1em = 16px*/
   .chapter-wrapper {
     max-width: 102.4rem;
     margin: 0 auto;
-    padding: 4rem 3.2rem;
+    padding: 4rem 2.8rem;
   }
 
   .port-title {
@@ -86,25 +86,25 @@ Instead, 1rem = 1em = 16px*/
     line-height: 1.6;
   }
 
-  .bento-container {
+  .bento01-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 1.2rem;
   }
 
-  .item1 {
+  .b01-item1 {
     grid-area: 1 / 1 / 2 / 5;
   }
-  .item2 {
+  .b01-item2 {
     grid-area: 2 / 1 / 2 / 3;
     height: 30rem;
   }
-  .item3 {
+  .b01-item3 {
     grid-area: 2 / 3 / 3 / 5;
     height: 30rem;
   }
-  .item4 {
+  .b01-item4 {
     display: none;
   }
 
@@ -176,4 +176,10 @@ Instead, 1rem = 1em = 16px*/
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
+
+  /* .single-bento img {
+    transform: scale(1.25);
+    transform-origin: center top;
+    height: auto;
+  } */
 }

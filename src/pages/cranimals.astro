@@ -34,6 +34,10 @@ const portOpener = {
   headerImage: headerImage,
 
   headerImageMobile: headerImageMobile,
+
+  desktopAlt: "Cranimals Header Image",
+
+  mobileAlt: "Cranimals Header Image",
 };
 
 // CHAPTER 01
@@ -92,9 +96,6 @@ const chapter03Text = {
 const chapter04Bento = {
   item1: section0101,
   item2: section0102,
-  alt1: "Cranimals Sketch 01",
-  alt2: "Cranimals Sketch 02",
-  alt3: "Cranimals Sketch 03",
 };
 
 // Text
@@ -213,11 +214,14 @@ import "../styles/queries-port.css";
         <!-- Photos -->
         <div class="double-container --mid-section-margin fade-in">
           <div class="bento-item">
-            <Image loading="eager" quality="medium" src={section0401} alt="" />
+            <Image loading="eager" 
+            quality="medium" 
+            src={section0401} 
+            alt="Cranimals Dogfood Packaging" />
           </div>
 
           <div class="bento-item no-mobile">
-            <Image loading="eager" quality="medium" src={section0402} alt="" />
+            <Image loading="eager" quality="medium" src={section0402} alt="Cranimals Banner with Staff on Display" />
           </div>
         </div>
         <!-- Text -->

@@ -10,14 +10,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".mediamite-img", {
   delay: 0.3,
-  duration: 10,
+  duration: 1,
   ease: "power1.out",
-  y: "100vw",
-  stagger: 0.7,
-  scale: 0.1,
+  y: 30,
+  opacity: 0,
+  // stagger: 0.7,
+  // scale: 0.1,
   scrollTrigger: {
     scrub: 1,
-    trigger: ".services-media",
+    trigger: ".mediamite-img",
     start: "top 90%",
     end: "top 50%",
     // markers: true,

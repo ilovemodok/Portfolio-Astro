@@ -40,7 +40,7 @@ import portThumbnail05 from '../images/homepage/portfolio-thumbnails/port-thumbn
 import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png';
 
 // About Me Images
-import aboutMePhoto from '../images/homepage/about-me/profile02.jpg';
+import aboutMePhoto from '../images/homepage/about-me/gw-profile.png';
 
 // Let's Talk!
 
@@ -82,7 +82,10 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
           <!-- hero text box -->
 <div class="hero-text-box">
-            <h1 class="gradient-text">A Designer & Artist All in One?</h1>
+            <h1 class="hero-title hero-title-addon">Product Design with an Artist's Touch</h1>
+
+
+						
             <p class="hero-description">
 
 							Avoid getting lost in a sea of cookie-cutter brands. Maximize your business' potential with stand out custom print & web design. 
@@ -113,6 +116,9 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
               loop
               autoplay
               alt="Animation of an illustrated Gary"
+							
+						
+							
             ></lottie-player>
 						<!-- <LottieHero src="/animations/hero-animation.json" 
 						autoplay="visible" 
@@ -137,7 +143,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 				class="header-underline"
 				src={Underline}
 				alt="bezier unlerline decoration"
-				loading="eager"
+				loading="lazy"
 			/>
 			<p class="section-body-text">
 				Here's some of the tools we'll use to put your branding headaches to
@@ -354,6 +360,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="Cranimals Zen Dogfood"
 							src={portThumbnail01}
 							loading="lazy"
+							quality="high"
 						/>
 
 					<div class="port-thumbnail-textbox">
@@ -376,6 +383,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="The Surfin' Burrito Donkey"
 							src={portThumbnail02}
 							loading="lazy"
+							quality="high"
 						/>
 					</picture>
 					<div class="port-thumbnail-textbox">
@@ -401,6 +409,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="Pothead Books Game Character Illustration"
 							src={portThumbnail03}
 							loading="lazy"
+							quality="high"
 						/>
 					<div class="port-thumbnail-textbox">
 						<p class="port-type-title">Pothead Books</p>
@@ -413,7 +422,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 			>
 
 			<!-- Portfolio / Rakuten -->
-			<a class="portfolio-link" href="http://garywintle.com/rakuten"
+			<a class="portfolio-link" href="/rakuten/"
 				><div class="portfolio-card">
 						<Image
 							width="338"
@@ -422,6 +431,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="Rakuten Illustration with a Godzilla-looking kaiju high-fiving a King Kong-looking kaiju"
 							src={portThumbnail04}
 							loading="lazy"
+							quality="high"
 						/>
 				
 
@@ -437,7 +447,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 
 			<!-- Portfolio / Bumblebee English -->
 
-			<a class="portfolio-link" href="http://garywintle.com/bumblebee">
+			<a class="portfolio-link" href="/bumblebee/">
 				<div class="portfolio-card">
 						<Image
 							width="338"
@@ -446,6 +456,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="Cute little bumblebee with Bumblebee English logo"
 							src={portThumbnail05}
 							loading="lazy"
+							quality="high"
 						/>
 					</picture>
 					<div class="port-thumbnail-textbox">
@@ -457,7 +468,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 			>
 
 			<!-- Portfolio / Dank Arson -->
-			<a class="portfolio-link" href="/messagesent.html"
+			<a class="portfolio-link" href="/dankarson/"
 				><div class="portfolio-card">
 						<Image
 							width="338"
@@ -466,6 +477,7 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 							alt="Dank Arson Logo"
 							src={portThumbnail06}
 							loading="lazy"
+							quality="high"
 						/>
 					</picture>
 					<div class="port-thumbnail-textbox">
@@ -508,7 +520,10 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 					class="about-me-selfie"
 					alt="Gary Wintle"
 					src={aboutMePhoto}
-					loading="eager"
+					loading="lazy"
+					quality="high"
+					width="400"
+					height="442"
 				/>
 			</div>
 			<div class="about-me-flex">
@@ -526,18 +541,21 @@ import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover
 				</p>
 				<p class="about-me-bodytext">
 					After travelling and designing around the world for a few years,
-					I’ve settled Japan. It’s the perfect place to find artistic design
+					I’ve settled in Japan. It’s the perfect place to find artistic design
 					inspiration for the many amazing clients I’m lucky enough to work
 					with.
 				</p>
+
+
+
 
 				<lottie-player
 				class="about-me-pencil"
 				id="firstLottie"
 				src="/animations/lottie-pencil.json"
+				
 			></lottie-player>
-
-			<!-- tester -->
+		
 
 			</div>
 		</div>

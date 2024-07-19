@@ -1,0 +1,191 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import CaseStudyOpener from "../components/CaseStudyOpener.astro";
+
+import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio.astro";
+
+import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
+
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
+import { Image } from "astro:assets";
+
+// <head>
+const pageTitle = "Rakuten";
+
+// OPENER
+
+const portOpener = {
+  title: "Rakuten",
+
+  sub: "NY x Tokyo Event Art",
+
+  clientText:
+    "Rakuten is Japan's giant e-commerce platform, offering a wide range of services from online shopping to digital content and communications.",
+
+  challengeText:
+    "I was asked by Rakuten's New York team to come up with a fun illustration for their upcoming 'New York meets Tokyo' open house event. This art would be used for merchandise, signage, and other event materials.",
+
+  roles: ["Character Design", "Graphic Design", "Merchandise"],
+
+  tools: ["Hand Drawing", "Hand Inking", "Adobe Illustrator"],
+
+  headerImage: headerImage,
+
+  headerImageMobile: headerImageMobile,
+
+  desktopAlt: "Rakuten Header",
+
+mobileAlt: "Rakuten Header",
+};
+
+// IMAGES
+
+// Opener
+import headerImage from "../images/rakuten/rakuten-opener.png";
+import headerImageMobile from "../images/rakuten/rakuten-opener-mobile.png";
+
+
+
+
+// Board 01
+import rakuten01 from "../images/rakuten/rakuten-sketch.png";
+import rakuten02 from "../images/rakuten/rakuten-pencils.png";
+import rakuten03 from "../images/rakuten/rakuten-ink.png";
+import rakuten04 from "../images/rakuten/rakuten-final.png";
+
+
+
+
+
+// CSS Styles
+import "../styles/portfolio.css";
+import "../styles/queries-port.css";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <!-- START OF CONTENT -->
+
+  <!-----------
+         OPENER 
+        -------------->
+
+  <main class="portfolio-wrapper">
+    <CaseStudyOpener portOpener={portOpener} />
+
+     <!-----------
+         CHARACTER SKETCH 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <div class="single-bento --mid-section-margin fade-in --onlight"><Image
+              src={rakuten01}
+              loading="eager"
+              quality="medium"
+              alt="Rakuten Initial Sketch"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 1">Feeling that Kaiju Vibe</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">What I started off with is what they chose with a friendly fist bump between each city's own lovable kaiju.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+
+             <!-----------
+         CHARACTER SKETCH 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <div class="single-bento --mid-section-margin fade-in --onlight"><Image
+              src={rakuten02}
+              loading="eager"
+              quality="medium"
+              alt="Rakuten Final Pencils"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 2">Fleshing out The Feel </h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">They liked everything except for the fist bump and asked for a 'high five' instead. With that, I went right to work on the final pencils.</p>
+              <p class= "port-body-text">I had to dive pretty deep into figuring out how a gorrilla would eat sushi with chopsicks with his feet!</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+             <!-----------
+         CHARACTER SKETCH 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <div class="single-bento --mid-section-margin fade-in --onlight"><Image
+              src={rakuten03}
+              loading="eager"
+              quality="medium"
+              alt="Rakuten Inked Art"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 3">Getting Some Ink</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">Lately, I've steered towards inking digitally. The fear of messing up ink of paper can be nail-biting.</p>
+              <p class= "port-body-text">But what the heck? I like the imperfections of inking on paper, so I brought out the pens and went to work.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+             <!-----------
+         CHARACTER SKETCH 
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos -->
+    
+            <Image
+              src={rakuten04}
+              class="single-bento --mid-section-margin fade-in --onlight"
+              loading="lazy"
+              quality="medium"
+              alt="Rakuten Final Artwork"
+            />
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Final Chapter">Finally, Color!</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">Seeing as this was an event shirt/posters and they wanted to keep Rakuten's colors (Red, white and black), I went for a simple graphical approach and colored in Adobe Illustrator.</p>
+              <p class= "port-body-text">I wanted to keep strict to the simple pallette, so I used halftones to shade the art, giving it a pretty cool feel I think!</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+    
+      
+    </div>
+  </main>
+</MainLayout>

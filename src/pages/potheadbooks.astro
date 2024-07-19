@@ -12,7 +12,7 @@ import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
 import { Image } from "astro:assets";
 
 // <head>
-const pageTitle = "Cranimals";
+const pageTitle = "Pothead Books";
 
 // OPENER
 
@@ -34,33 +34,16 @@ const portOpener = {
   headerImage: headerImage,
 
   headerImageMobile: headerImageMobile,
+
+  desktopAlt: "Pothead Books Header",
+
+mobileAlt: "Pothead Books Header",
 };
 
 // CHAPTER 01
 
 
 
-// Text
-const chapter01Text = {
-  title: "Initial Sketches",
-  number: "Chapter 1",
-  body: [
-    "We agreed on the concept of something that mixed cute doggy character packaging we often see in the aisles with something a little serene and worthy of the ZenDog title.",
-  ],
-};
-
-// CHAPTER 02
-
-// Bento
-
-// Text
-const chapter02Text = {
-  title: "Tightening Pencils",
-  number: "Chapter 2",
-  body: [
-    "I came up with a few tighter pencils. They liked these a lot, but for the central image wanted sometihng easier to read from far away. So I went back to the drawing board!",
-  ],
-};
 
 // CHAPTER 03
 
@@ -72,40 +55,15 @@ const chapter01Bento = {
   item2: boardsketch02,
   item3: boardsketch03,
   item4: boardsketch04,
-  alt1: "The Surfin' Burrito Sketch 01",
-  alt2: "The Surfin' Burrito Sketch 02",
-  alt3: "The Surfin' Burrito Sketch 03",
-  alt4: "The Surfin' Burrito Sketch 04",
+  alt1: "Marijuana Bowl Board Outline",
+  alt2: "Marijuana Bowl Supercrop Sketch",
+  alt3: "Marijuana Bowl 1 Pieces Sketch",
+  alt4: "Marijuana Bowl Growshop Sketch",
 };
 
-// Text
-const chapter03Text = {
-  title: "Another pass at the art",
-  number: "Chapter 3",
-  body: [
-    "I decided to whip out the 'ol Wacom tablet and do a digital version of the art. This was a lot easier to read from far away, and they loved it. With that, I went right to the next step.",
-  ],
-};
 
-// CHAPTER 04
 
-const chapter04Text = {
-  title: "Final Art",
-  number: "Chapter 4",
-  body: [
-    "I finished inking and coloringin Adobe Illustrator. I find using Illustrator for business related mascots makes for a really clean look that's easy to read.",
-  ],
-};
 
-// Final Chapter
-
-const chapter05Text = {
-  title: "Showtime!",
-  number: "Final Chapter",
-  body: [
-    "With the art done, we rushed to get a t-shirt printed to be ready for Guy Fiera and his popular cooking show Diners, Drive-ins, & Dives! Check it out yourself, it's Season 26, Episode 6.",
-  ],
-};
 
 // IMAGES
 
@@ -165,9 +123,9 @@ import "../styles/queries-port.css";
             <Image
               src={characters01}
               class="single-bento --mid-section-margin fade-in"
-              loading="eager"
+              loading="lazy"
               quality="medium"
-              alt="Cranimal Final Pencil Sketch"
+              alt="Marijuana Bowl Characters' Pencil Sketch"
             />
     
             <!-- Text -->
@@ -195,7 +153,7 @@ import "../styles/queries-port.css";
               class="single-bento --mid-section-margin fade-in"
               loading="lazy"
               quality="medium"
-              alt="Cranimal Final Artwork"
+              alt="Marijuana Bowl Final Character Art"
             />
     
             <!-- Text -->
@@ -251,25 +209,25 @@ import "../styles/queries-port.css";
       loading="eager"
       quality="medium"
       src={boardfinished01}
-      alt=""
+      alt="Marijuana Bowl Board Game"
     /></div>
               <div class="bento-item b02-item2">    <Image
       loading="eager"
       quality="medium"
       src={boardfinished02}
-      alt=""
+      alt="Marijuana Bowl Supercrop Corner Panel"
     /></div>
               <div class="bento-item b02-item3">    <Image
       loading="eager"
       quality="medium"
       src={boardfinished03}
-      alt=""
+      alt="Marijuana Bowl Take One Car Panels"
     /></div>
               <div class="bento-item b02-item4">    <Image
       loading="eager"
       quality="medium"
       src={boardfinished04}
-      alt=""
+      alt="Marijuana Bowl Grow Shop Panel"
     /></div>
             </div>
   

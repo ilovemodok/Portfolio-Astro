@@ -18,12 +18,18 @@ import '../styles/global.css';
 import '../styles/style.css';
 import '../styles/queries.css';
 
+//Analytics
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
 
 
 ---
 
 <html lang="en">
 	<head>
+
+    <!-- Analytics -->
+<GoogleAnalytics />
 
 
 
@@ -44,6 +50,29 @@ import '../styles/queries.css';
       content="Gary Wintle, HTML, CSS, JavaScript, Photoshop, freelancer, illustrator, book design, for hire, designer in Japan, web developer in Japan, UX artist"
     />
     <meta name="author" content="Gary Wintle" />
+
+    <!-- ****************
+      Open Graph aka Social Media Social Pic Link Stuff 
+    **********************-->
+
+    <meta property="og:title" content="Gary Wintle | Product Illustrator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.garywintle.com/" />
+    <meta property="og:image" content="https://www.garywintle.com/opengraph/GW-logo-social-banner.png" />
+    <meta property="og:site_name" content="Gary Wintle" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Specific -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@GaryWintle" />
+<meta name="twitter:title" content="Gary Wintle's Portfolio" />
+<meta name="twitter:description" content="Gary Wintle's UX/UI and Illustration Portfolio. Showcasing a range of character designs and interactive user interfaces." />
+<meta name="twitter:image" content="https://www.garywintle.com/opengraph/GW-logo-social-banner.png" />
+
 
 <!-- ***************
       BROWSER ICON STUFF
@@ -71,9 +100,14 @@ import '../styles/queries.css';
 
 <!-- Lottie -->
 
-<script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+<!-- <link rel="preconnect" href="https://unpkg.com" crossorigin> -->
 
-    <script is:inline src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script defer src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<!-- 
+    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script> -->
+
 
     <script defer src="/js/lottie-inter.js"></script>
 
@@ -94,18 +128,13 @@ import '../styles/queries.css';
       <script defer src="/js/gsap.js"></script>
 
 <!-- Lightbox -->
-    <link href="/lightbox/css/lightbox.css" rel="stylesheet" />
+    <!-- <link href="/lightbox/css/lightbox.css" rel="stylesheet" /> -->
 
 <!-- Font Stuff -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@700&display=swap" rel="stylesheet">
+<!-- Georama Font -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/georama@latest/latin-800-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 <!-- Smooth Scrolling -->
     <!-- <script
@@ -113,7 +142,7 @@ import '../styles/queries.css';
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script> -->
 
-    <script is:inline src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.9/dist/smoothscroll.min.js"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.9/dist/smoothscroll.min.js"></script> -->
 
     <!-- <script>
       smoothscroll.polyfill();
@@ -211,10 +240,8 @@ import '../styles/queries.css';
         >© <span class="year">0000</span> Gary Wintle Inc. Illustrated,
         designed, animated, and coded by finger tips. All rights reserved.</span
       >
+
+
     </footer>
-
-
-
-
- </body>
+</body>
 </html>

@@ -9,6 +9,7 @@
 // });
 
 // Pencil GW Animation
+
 LottieInteractivity.create({
   player: "#firstLottie",
   mode: "scroll",

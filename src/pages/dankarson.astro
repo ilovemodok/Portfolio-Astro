@@ -1,0 +1,169 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import CaseStudyOpener from "../components/CaseStudyOpener.astro";
+
+import CaseStudyBento4GoldenRatio from "../components/CaseStudyBento4GoldenRatio.astro";
+
+import CaseStudyChapterText from "../components/CaseStudyChapterText.astro";
+
+import PortfolioThumbnails from "../components/PortfolioThumbnails.astro";
+
+import { Image } from "astro:assets";
+
+// <head>
+const pageTitle = "Dank Arson";
+
+// OPENER
+
+const portOpener = {
+  title: "Dank Arson",
+
+  sub: "Logo & Motions Graphics",
+
+  clientText:
+    "Dank Arson is a new Youtube channel by Politial Activist Dana Larsen. The channel covers him creating crazy smoking creations.",
+
+  challengeText:
+    "Dana wanted a logo that was fun and friendly. He needed it animated as well as an intro to his show.",
+
+  roles: ["Logo Design", "Motion Graphics"],
+
+  tools: ["Hand Drawing", "Adobe Illustrator", "Adobe After Effects"],
+
+  headerImage: headerImage,
+
+  headerImageMobile: headerImageMobile,
+
+  desktopAlt: "Dank Arson Header Image",
+
+mobileAlt: "Dank Arson Header Image",
+};
+
+// IMAGES
+
+// Opener
+import headerImage from "../images/dankarson/dankarson-opener-desktop.png";
+import headerImageMobile from "../images/dankarson/dankarson-opener-mobile.png";
+
+
+
+
+// Sketch
+import dankArsonSketch from "../images/dankarson/dankarson-sketch.png";
+
+
+// Final Logo
+import dankArsonFinal from "../images/dankarson/dankarson-final.png";
+
+
+
+
+
+
+// CSS Styles
+import "../styles/portfolio.css";
+import "../styles/queries-port.css";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <!-- START OF CONTENT -->
+
+  <!-----------
+         OPENER 
+        -------------->
+
+  <main class="portfolio-wrapper">
+    <CaseStudyOpener portOpener={portOpener} />
+
+
+
+        <!--SKETCH -->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos  -->
+    
+            <div class="single-bento --mid-section-margin fade-in"><Image
+              src={dankArsonSketch}
+              loading="eager"
+              quality="medium"
+              alt="Dank Arson Initial Sketch"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 1">Getting the Right Look</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">I used a few photos of Dana as refernce to get the right look for him as a cartoon for his logo.</p>
+              <p class= "port-body-text">Upon approval, I sent to work on the typography and graphic elements.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+        
+        <!--SKETCH -->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos  -->
+    
+            <div class="single-bento --mid-section-margin fade-in"><Image
+              src={dankArsonFinal}
+              loading="eager"
+              quality="medium"
+              alt="Rakuten Initial Sketch"
+            /></div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Chapter 2">Vectoring the Logo</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">I thought it would be cool to be inspired by gamers' and athlete's sporting logos and took it from there.</p>
+              <p class= "port-body-text">It didn't take long to get a look that everyone was happy with.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+       
+
+        
+      <!-----------
+         VIDEO
+        -------------->
+
+        <section>
+          <div class="chapter-wrapper">
+            <!-- Photos  -->
+    
+            <div class="video-container --mid-section-margin">
+              <!-- Your iframe embed code goes here -->
+              <iframe 
+              src="https://www.youtube.com/embed/ySTjLdHKbh4" frameborder="0" 
+              allowfullscreen
+              title="Dank Arson Motion Graphic">
+            </iframe>
+            </div>
+    
+            <!-- Text -->
+            <div class="chapter-text-block"><div class="chapter-title-container">
+              <h2 class="chapter-title" data-chapter="Final Chapter">Animating Along the Path to Fun</h2>
+            </div>
+            <div class="chapter-text-container">
+              <p class= "port-body-text">Finally, I put it into motion with Adobe After Effects. I don't get as many chances to animate as I'd like. This was a great chance to exercise that skill.</p>
+              
+              
+            </div></div>
+          </div>
+        </section>
+
+
+      
+  </main>
+</MainLayout>

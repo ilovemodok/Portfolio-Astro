@@ -1,0 +1,50 @@
+# BEGIN Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Your specific caching rules here
+  # For example, to cache images for a long time, you would use:
+  # ExpiresByType image/svg+xml "access plus 1 year"
+  # ExpiresByType image/webp "access plus 1 year"
+  
+  # Cache HTML, CSS, JavaScript, JSON, and SVG files for 1 year
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/json "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/html "access plus 1 year"
+  ExpiresByType text/plain "access plus 1 year"
+  ExpiresByType text/xml "access plus 1 year"
+</IfModule>
+# END Caching
+
+# BEGIN Gzip Compression
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, JSON, SVG
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Handle browsers that may send incorrect Accept-Encoding values
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+# END Gzip Compression
+<IfModule mod_headers.c>
+    <FilesMatch "\.(json)$">
+        SetOutputFilter BROTLI_COMPRESS
+        Header set Content-Encoding br
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+    <filesMatch "\.(js|css|html|php|json)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</IfModule>
